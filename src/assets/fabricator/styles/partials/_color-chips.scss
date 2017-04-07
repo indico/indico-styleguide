@@ -16,7 +16,8 @@
 	font-size: 0.75em;
 	padding: 1em;
 	margin-bottom: 2em;
-  box-sizing: border-box;
+    box-sizing: border-box;
+	max-width: 150px;
 
 	@media (min-width: 60em) {
 		flex-basis: 13em;
