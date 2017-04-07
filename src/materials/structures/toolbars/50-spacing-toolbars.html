@@ -1,0 +1,24 @@
+---
+notes: |
+    A toolbar does not add any margins by itself. This is to avoid complex situations where a toolbar needs to be used in combination with other elements. In case a top and/or bottom margin is required, the `.toolbar` and `.toolbars` classes provide the modifiers `.space-before` and `.space-after`.
+---
+
+<h4>Default toolbar spacing</h4>
+<div style="border: 10px solid gray"></div>
+<div class="toolbar">
+    {{> buttons.button}}
+
+    {{> buttons.button}}
+
+</div>
+<div style="border: 10px solid gray"></div>
+
+<h4>Using modifiers</h4>
+<div style="border: 10px solid gray"></div>
+<div class="toolbar space-before space-after">
+    {{> buttons.button}}
+
+    {{> buttons.button}}
+
+</div>
+<div style="border: 10px solid gray"></div>
