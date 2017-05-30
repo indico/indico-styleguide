@@ -54,6 +54,13 @@ const config = {
       watch: 'src/assets/toolkit/images/**/*',
     },
   },
+  fonts: {
+    indico: {
+      src: ['indico/indico/htdocs/static/fonts/**/*'],
+      dest: 'dist/assets/toolkit/static/fonts',
+      watch: 'indico/indico/htdocs/static/fonts/**/*',
+    },
+  },
   templates: {
     watch: 'src/**/*.{html,md,json,yml}',
   },
@@ -138,6 +145,11 @@ gulp.task('favicon', () => {
   .pipe(gulp.dest(config.dest));
 });
 
+// fonts
+gulp.task('fonts', () => {
+  return gulp.src(config.fonts.indico.src)
+    .pipe(gulp.dest(config.fonts.indico.dest));
+});
 
 // assembler
 gulp.task('assembler', (done) => {
@@ -172,6 +184,9 @@ gulp.task('serve', () => {
   gulp.task('images:watch', ['images'], browserSync.reload);
   gulp.watch(config.images.toolkit.watch, ['images:watch']);
 
+  gulp.task('fonts:watch', ['fonts'], browserSync.reload);
+  gulp.watch(config.fonts.indico.watch, ['fonts:watch']);
+
 });
 
 
@@ -183,6 +198,7 @@ gulp.task('default', ['clean'], () => {
     'styles',
     'scripts',
     'images',
+    'fonts',
     'assembler',
   ];
 
