@@ -11,6 +11,7 @@
 	overflow-x: hidden;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
+	border-right: 1px solid #dfdfdf;
 
 	.f-menu-active & {
 		transform: translate(0, 0);
@@ -63,5 +64,22 @@
 		&:hover {
 			color: color(normal);
 		}
+	}
+}
+
+a.indico-logo-wrapper {
+	padding: 0;
+}
+
+.indico-logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top: 1px solid #dfdfdf;
+	border-bottom: 1px solid #dfdfdf;
+	padding: 20px;
+
+	img {
+		width: 80%;
 	}
 }

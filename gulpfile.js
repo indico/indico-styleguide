@@ -49,7 +49,7 @@ const config = {
   },
   images: {
     toolkit: {
-      src: ['src/assets/toolkit/images/**/*', 'src/favicon.ico'],
+      src: ['src/assets/toolkit/images/*', 'src/favicon.ico'],
       dest: 'dist/assets/toolkit/images',
       watch: 'src/assets/toolkit/images/**/*',
     },
