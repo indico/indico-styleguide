@@ -11,6 +11,7 @@ const rename = require('gulp-rename');
 const reload = browserSync.reload;
 const runSequence = require('run-sequence');
 const sass = require('gulp-sass');
+const importOnce = require('node-sass-import-once');
 const sourcemaps = require('gulp-sourcemaps');
 const webpack = require('webpack');
 
@@ -23,11 +24,6 @@ const config = {
       src: 'src/assets/fabricator/styles/fabricator.scss',
       dest: 'dist/assets/fabricator/styles',
       watch: 'src/assets/fabricator/styles/**/*.scss',
-    },
-    indico: {
-      src: 'indico/indico/htdocs/sass/screen.scss',
-      dest: 'dist/assets/toolkit/styles',
-      watch: 'src/assets/toolkit/styles/**/*.scss',
     },
     toolkit: {
       src: 'src/assets/toolkit/styles/toolkit.scss',
@@ -85,24 +81,12 @@ gulp.task('styles:fabricator', () => {
   .pipe(gulpif(config.dev, reload({ stream: true })));
 });
 
-gulp.task('styles:indico', () => {
-  gulp.src(config.styles.indico.src)
-  .pipe(gulpif(config.dev, sourcemaps.init()))
-  .pipe(sass({
-    includePaths: ['./node_modules', './indico/indico/htdocs/sass/lib/compass'],
-  }).on('error', sass.logError))
-  .pipe(prefix('last 1 version'))
-  .pipe(gulpif(!config.dev, csso()))
-  .pipe(gulpif(config.dev, sourcemaps.write()))
-  .pipe(gulp.dest(config.styles.indico.dest))
-  .pipe(gulpif(config.dev, reload({ stream: true })));
-});
-
 gulp.task('styles:toolkit', () => {
   gulp.src(config.styles.toolkit.src)
   .pipe(gulpif(config.dev, sourcemaps.init()))
   .pipe(sass({
     includePaths: ['./node_modules', './indico/indico/htdocs/sass/lib/compass', './indico/indico/htdocs/sass'],
+    importer: importOnce,
   }).on('error', sass.logError))
   .pipe(prefix('last 1 version'))
   .pipe(gulpif(!config.dev, csso()))
@@ -111,7 +95,7 @@ gulp.task('styles:toolkit', () => {
   .pipe(gulpif(config.dev, reload({ stream: true })));
 });
 
-gulp.task('styles', ['styles:fabricator', 'styles:indico', 'styles:toolkit']);
+gulp.task('styles', ['styles:fabricator', 'styles:toolkit']);
 
 
 // scripts
