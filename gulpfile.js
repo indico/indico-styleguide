@@ -14,6 +14,7 @@ const sass = require('gulp-sass');
 const importOnce = require('node-sass-import-once');
 const sourcemaps = require('gulp-sourcemaps');
 const webpack = require('webpack');
+const deploy = require('gulp-gh-pages');
 
 // configuration
 const config = {
@@ -193,4 +194,12 @@ gulp.task('default', ['clean'], () => {
     }
   });
 
+});
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', () => {
+    return gulp.src("./dist/**/*")
+        .pipe(deploy());
 });
