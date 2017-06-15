@@ -46,6 +46,7 @@
     "gulp-if": "^2.0.1",
     "gulp-imagemin": "^3.0.1",
     "gulp-rename": "^1.2.2",
+    "gulp-rework": "^1.2.0",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-util": "^3.0.7",

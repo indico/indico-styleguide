@@ -15,6 +15,9 @@ const importOnce = require('node-sass-import-once');
 const sourcemaps = require('gulp-sourcemaps');
 const webpack = require('webpack');
 const deploy = require('gulp-gh-pages');
+const rework = require('gulp-rework');
+
+const STATIC_BASE = '../static/';
 
 // configuration
 const config = {
@@ -64,6 +67,21 @@ const config = {
   dest: 'dist',
 };
 
+function reworkCSSUrls(style) {
+    style.rules.forEach(function(rule) {
+        if (!rule.declarations) {
+            return;
+        }
+        rule.declarations.filter(function(decl) {
+            if (!decl.value) {
+                return;
+            }
+            return ~decl.value.indexOf('url(');
+        }).forEach(function(decl) {
+            decl.value = decl.value.replace(/\/static\//g, STATIC_BASE);
+        });
+    });
+}
 
 // clean
 gulp.task('clean', del.bind(null, [config.dest]));
@@ -71,29 +89,33 @@ gulp.task('clean', del.bind(null, [config.dest]));
 
 // styles
 gulp.task('styles:fabricator', () => {
-  gulp.src(config.styles.fabricator.src)
-  .pipe(sourcemaps.init())
-  .pipe(sass().on('error', sass.logError))
-  .pipe(prefix('last 1 version'))
-  .pipe(gulpif(!config.dev, csso()))
-  .pipe(rename('f.css'))
-  .pipe(sourcemaps.write())
-  .pipe(gulp.dest(config.styles.fabricator.dest))
-  .pipe(gulpif(config.dev, reload({ stream: true })));
+    gulp.src(config.styles.fabricator.src)
+        .pipe(sourcemaps.init())
+        .pipe(sass().on('error', sass.logError))
+        .pipe(prefix('last 1 version'))
+        .pipe(gulpif(!config.dev, csso()))
+        .pipe(rename('f.css'))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(config.styles.fabricator.dest))
+        .pipe(gulpif(config.dev, reload({ stream: true })));
 });
 
 gulp.task('styles:toolkit', () => {
-  gulp.src(config.styles.toolkit.src)
-  .pipe(gulpif(config.dev, sourcemaps.init()))
-  .pipe(sass({
-    includePaths: ['./node_modules', './indico/indico/htdocs/sass/lib/compass', './indico/indico/htdocs/sass'],
-    importer: importOnce,
-  }).on('error', sass.logError))
-  .pipe(prefix('last 1 version'))
-  .pipe(gulpif(!config.dev, csso()))
-  .pipe(gulpif(config.dev, sourcemaps.write()))
-  .pipe(gulp.dest(config.styles.toolkit.dest))
-  .pipe(gulpif(config.dev, reload({ stream: true })));
+    gulp.src(config.styles.toolkit.src)
+        .pipe(gulpif(config.dev, sourcemaps.init()))
+        .pipe(sass({
+            includePaths: [
+                './node_modules',
+                './indico/indico/htdocs/sass/lib/compass',
+                './indico/indico/htdocs/sass'],
+            importer: importOnce,
+        }).on('error', sass.logError))
+        .pipe(rework(reworkCSSUrls))
+        .pipe(prefix('last 1 version'))
+        .pipe(gulpif(!config.dev, csso()))
+        .pipe(gulpif(config.dev, sourcemaps.write()))
+        .pipe(gulp.dest(config.styles.toolkit.dest))
+        .pipe(gulpif(config.dev, reload({ stream: true })));
 });
 
 gulp.task('styles', ['styles:fabricator', 'styles:toolkit']);
