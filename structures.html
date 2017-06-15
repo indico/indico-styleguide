@@ -100,6 +100,9 @@
 								<a href="structures.html#lists">Lists</a>
 							</li>
 							<li>
+								<a href="structures.html#messages">Messages</a>
+							</li>
+							<li>
 								<a href="structures.html#toolbars">Toolbars</a>
 							</li>
 						</ul>
@@ -523,36 +526,6 @@
 </div>
 
 		</div>
-		<div class="f-item-group" id="boxes.70-error-box">
-			<div class="f-item-heading-group" data-f-toggle="labels">
-				<h3 class="f-item-heading">Error Box</h3>
-				<div class="f-item-controls">
-					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
-						<svg>
-							<use xlink:href="#f-icon-code" />
-						</svg>
-					</span>
-				</div>
-			</div><div class="f-item-preview">
-	<div class="error-box">
-	<h1>message</h1>
-	<p>description</p>
-	<div class="error-box-small">
-		<a href="#">link</a>
-	</div>
-</div>
-</div>
-<div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;div class&#x3D;&quot;error-box&quot;&gt;
-	&lt;h1&gt;message&lt;/h1&gt;
-	&lt;p&gt;description&lt;/p&gt;
-	&lt;div class&#x3D;&quot;error-box-small&quot;&gt;
-		&lt;a href&#x3D;&quot;#&quot;&gt;link&lt;/a&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-
-		</div>
 		<div class="f-item-group" id="boxes.75-action-box">
 			<div class="f-item-heading-group" data-f-toggle="labels">
 				<h3 class="f-item-heading">Action Box</h3>
@@ -773,6 +746,30 @@
 			&lt;div&gt;description&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="boxes.80-padded-box">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Padded Box</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-preview">
+	<div class="padded-box">
+	<div class="padded-box-pad icon-image"></div>
+	<div class="padded-box-content">box content</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;padded-box&quot;&gt;
+	&lt;div class&#x3D;&quot;padded-box-pad icon-image&quot;&gt;&lt;/div&gt;
+	&lt;div class&#x3D;&quot;padded-box-content&quot;&gt;box content&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 </div>
 
@@ -1017,6 +1014,412 @@
 		&lt;/ul&gt;
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-group" id="messages">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Messages</h2>
+	</div>
+		<div class="f-item-group" id="messages.00-corner-message">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Corner Message</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Wrap the corner message in a container with id <code>corner-message-container</code> in order to position it properly at the
+bottom of the page.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="corner-message">
+	<div class="corner-message-text">Do not forget to save your changes!</div>
+	<a class="corner-message-action" href="#">Save now</a>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;corner-message&quot;&gt;
+	&lt;div class&#x3D;&quot;corner-message-text&quot;&gt;Do not forget to save your changes!&lt;/div&gt;
+	&lt;a class&#x3D;&quot;corner-message-action&quot; href&#x3D;&quot;#&quot;&gt;Save now&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="messages.02-semantic-corner-message">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Semantic Corner Message</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-preview">
+	<div class="corner-message success">
+	<div class="corner-message-text">Do not forget to save your changes!</div>
+	<a class="corner-message-action" href="#">Save now</a>
+</div>
+<div class="corner-message warning">
+	<div class="corner-message-text">Do not forget to save your changes!</div>
+	<a class="corner-message-action" href="#">Save now</a>
+</div>
+<div class="corner-message error">
+	<div class="corner-message-text">Do not forget to save your changes!</div>
+	<a class="corner-message-action" href="#">Save now</a>
+</div>
+<div class="corner-message highlight">
+	<div class="corner-message-text">Do not forget to save your changes!</div>
+	<a class="corner-message-action" href="#">Save now</a>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;corner-message success&quot;&gt;
+	&lt;div class&#x3D;&quot;corner-message-text&quot;&gt;Do not forget to save your changes!&lt;/div&gt;
+	&lt;a class&#x3D;&quot;corner-message-action&quot; href&#x3D;&quot;#&quot;&gt;Save now&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;corner-message warning&quot;&gt;
+	&lt;div class&#x3D;&quot;corner-message-text&quot;&gt;Do not forget to save your changes!&lt;/div&gt;
+	&lt;a class&#x3D;&quot;corner-message-action&quot; href&#x3D;&quot;#&quot;&gt;Save now&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;corner-message error&quot;&gt;
+	&lt;div class&#x3D;&quot;corner-message-text&quot;&gt;Do not forget to save your changes!&lt;/div&gt;
+	&lt;a class&#x3D;&quot;corner-message-action&quot; href&#x3D;&quot;#&quot;&gt;Save now&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;corner-message highlight&quot;&gt;
+	&lt;div class&#x3D;&quot;corner-message-text&quot;&gt;Do not forget to save your changes!&lt;/div&gt;
+	&lt;a class&#x3D;&quot;corner-message-action&quot; href&#x3D;&quot;#&quot;&gt;Save now&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="messages.03-progressive-corner-message">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Progressive Corner Message</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-preview">
+	<div class="corner-message progress">
+	<div class="corner-message-text">Saving...</div>
+</div>
+<div class="corner-message progress success">
+	<div class="corner-message-text">Saving...</div>
+</div>
+<div class="corner-message progress warning">
+	<div class="corner-message-text">Saving...</div>
+</div>
+<div class="corner-message progress error">
+	<div class="corner-message-text">Saving...</div>
+</div>
+<div class="corner-message progress highlight">
+	<div class="corner-message-text">Saving...</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;corner-message progress&quot;&gt;
+	&lt;div class&#x3D;&quot;corner-message-text&quot;&gt;Saving...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;corner-message progress success&quot;&gt;
+	&lt;div class&#x3D;&quot;corner-message-text&quot;&gt;Saving...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;corner-message progress warning&quot;&gt;
+	&lt;div class&#x3D;&quot;corner-message-text&quot;&gt;Saving...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;corner-message progress error&quot;&gt;
+	&lt;div class&#x3D;&quot;corner-message-text&quot;&gt;Saving...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;corner-message progress highlight&quot;&gt;
+	&lt;div class&#x3D;&quot;corner-message-text&quot;&gt;Saving...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="messages.05-error-box">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Error Box</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-preview">
+	<div class="error-box">
+	<h1>message</h1>
+	<p>description</p>
+	<div class="error-box-small">
+		<a href="#">link</a>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;error-box&quot;&gt;
+	&lt;h1&gt;message&lt;/h1&gt;
+	&lt;p&gt;description&lt;/p&gt;
+	&lt;div class&#x3D;&quot;error-box-small&quot;&gt;
+		&lt;a href&#x3D;&quot;#&quot;&gt;link&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="messages.10-message-box">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Message Box</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>You can use the fully customizable <code>message_box</code> macro.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="info-message-box">
+	<div class="message-box-content">
+		<span class="icon"></span>
+		<div class="message-text">There are no events in this category</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;info-message-box&quot;&gt;
+	&lt;div class&#x3D;&quot;message-box-content&quot;&gt;
+		&lt;span class&#x3D;&quot;icon&quot;&gt;&lt;/span&gt;
+		&lt;div class&#x3D;&quot;message-text&quot;&gt;There are no events in this category&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="messages.12-bigger-message-box">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Bigger Message Box</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-preview">
+	<div class="info-message-box large-icon">
+	<div class="message-box-content">
+		<span class="icon"></span>
+		<div class="message-text">There are no events in this category</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;info-message-box large-icon&quot;&gt;
+	&lt;div class&#x3D;&quot;message-box-content&quot;&gt;
+		&lt;span class&#x3D;&quot;icon&quot;&gt;&lt;/span&gt;
+		&lt;div class&#x3D;&quot;message-text&quot;&gt;There are no events in this category&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="messages.14-message-box-with-footer">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Message Box With Footer</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-preview">
+	<div class="info-message-box">
+	<div class="message-box-content">
+		<span class="icon"></span>
+		<div class="message-text">There are no events in this category</div>
+	</div>
+	<div class="message-box-footer">footer</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;info-message-box&quot;&gt;
+	&lt;div class&#x3D;&quot;message-box-content&quot;&gt;
+		&lt;span class&#x3D;&quot;icon&quot;&gt;&lt;/span&gt;
+		&lt;div class&#x3D;&quot;message-text&quot;&gt;There are no events in this category&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;message-box-footer&quot;&gt;footer&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="messages.16-semantic-message-box">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Semantic Message Box</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-preview">
+	<div class="highlight-message-box">
+	<div class="message-box-content">
+		<span class="icon"></span>
+		<div class="message-text">This is the message</div>
+	</div>
+</div>
+
+<div class="success-message-box">
+	<div class="message-box-content">
+		<span class="icon"></span>
+		<div class="message-text">This is the message</div>
+	</div>
+</div>
+
+<div class="warning-message-box">
+	<div class="message-box-content">
+		<span class="icon"></span>
+		<div class="message-text">This is the message</div>
+	</div>
+</div>
+
+<div class="error-message-box">
+	<div class="message-box-content">
+		<span class="icon"></span>
+		<div class="message-text">This is the message</div>
+	</div>
+</div>
+
+<div class="danger-message-box">
+	<div class="message-box-content">
+		<span class="icon"></span>
+		<div class="message-text">This is the message</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;highlight-message-box&quot;&gt;
+	&lt;div class&#x3D;&quot;message-box-content&quot;&gt;
+		&lt;span class&#x3D;&quot;icon&quot;&gt;&lt;/span&gt;
+		&lt;div class&#x3D;&quot;message-text&quot;&gt;This is the message&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;success-message-box&quot;&gt;
+	&lt;div class&#x3D;&quot;message-box-content&quot;&gt;
+		&lt;span class&#x3D;&quot;icon&quot;&gt;&lt;/span&gt;
+		&lt;div class&#x3D;&quot;message-text&quot;&gt;This is the message&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;warning-message-box&quot;&gt;
+	&lt;div class&#x3D;&quot;message-box-content&quot;&gt;
+		&lt;span class&#x3D;&quot;icon&quot;&gt;&lt;/span&gt;
+		&lt;div class&#x3D;&quot;message-text&quot;&gt;This is the message&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;error-message-box&quot;&gt;
+	&lt;div class&#x3D;&quot;message-box-content&quot;&gt;
+		&lt;span class&#x3D;&quot;icon&quot;&gt;&lt;/span&gt;
+		&lt;div class&#x3D;&quot;message-text&quot;&gt;This is the message&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;danger-message-box&quot;&gt;
+	&lt;div class&#x3D;&quot;message-box-content&quot;&gt;
+		&lt;span class&#x3D;&quot;icon&quot;&gt;&lt;/span&gt;
+		&lt;div class&#x3D;&quot;message-text&quot;&gt;This is the message&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="messages.20-error-message-tag">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Error Message Tag</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-preview">
+	<span class="error-message-tag">Invalid</span>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;span class&#x3D;&quot;error-message-tag&quot;&gt;Invalid&lt;/span&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="messages.21-underlined-error-message">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Underlined Error Message</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-preview">
+	<span class="error-message-underline">Invalid</span>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;span class&#x3D;&quot;error-message-underline&quot;&gt;Invalid&lt;/span&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="messages.30-semantic-message">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Semantic Message</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-preview">
+	<div class="infoMessage">message</div>
+<div class="errorMessage">message</div>
+<div class="warningMessage">message</div>
+<div class="successMessage">message</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;infoMessage&quot;&gt;message&lt;/div&gt;
+&lt;div class&#x3D;&quot;errorMessage&quot;&gt;message&lt;/div&gt;
+&lt;div class&#x3D;&quot;warningMessage&quot;&gt;message&lt;/div&gt;
+&lt;div class&#x3D;&quot;successMessage&quot;&gt;message&lt;/div&gt;</code></pre>
 </div>
 
 		</div>
