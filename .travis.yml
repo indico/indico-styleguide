@@ -1,0 +1,23 @@
+sudo: false
+language: python
+python:
+  - 2.7
+before_install:
+    - cd indico
+    - pip install fabric
+    - pip install requests
+    - pip install nodeenv
+install:
+  - . $HOME/.nvm/nvm.sh
+  - nvm install stable
+  - nvm use stable
+  - npm install grunt-cli
+  - fab setup_deps:system_node=true
+before_deploy: git config --global user.email publish@travis.github && git config --global user.name "Travis"
+deploy:
+  - edge: true
+    skip_cleanup: true
+    provider: script
+    script: gulp deploy
+    on:
+      branch: gh-pages
