@@ -81,6 +81,9 @@
 								<a href="components.html#buttons">Buttons</a>
 							</li>
 							<li>
+								<a href="components.html#inputs">Inputs</a>
+							</li>
+							<li>
 								<a href="components.html#labels">Labels</a>
 							</li>
 							<li>
@@ -93,6 +96,12 @@
 								<a href="components.html#messages">Messages</a>
 							</li>
 							<li>
+								<a href="components.html#progress-bars">Progress Bars</a>
+							</li>
+							<li>
+								<a href="components.html#tables">Tables</a>
+							</li>
+							<li>
 								<a href="components.html#tags">Tags</a>
 							</li>
 						</ul>
@@ -103,23 +112,23 @@
 							<li>
 								<a href="css.html#colors">Colors</a>
 							</li>
+							<li>
+								<a href="css.html#icons">Icons</a>
+							</li>
 						</ul>
 					</li>
 					<li>
 						<a href="structures.html" class="f-menu__heading">Structures</a>
 						<ul>
 							<li>
+								<a href="structures.html#forms">Forms</a>
+							</li>
+							<li>
 								<a href="structures.html#toolbars">Toolbars</a>
 							</li>
 						</ul>
 					</li>
 			
-			
-					<li>
-						<a href="docs.html" class="f-menu__heading">Docs</a>
-						<ul>
-						</ul>
-					</li>
 			
 				</ul>
 			
@@ -139,6 +148,208 @@
 
 		
 <h1 data-f-toggle="labels">Structures</h1>
+
+
+<div class="f-item-group" id="forms">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Forms</h2>
+	</div>
+		<div class="f-item-group" id="forms.10-form">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Form</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>To render forms, use the macros in <code>_form.html</code>. This is an example of the basic structure of an <code>i-form</code>.</p>
+
+</div>
+<div class="f-item-preview">
+	<form class="i-form">
+	<div class="form-group">
+		<div class="form-label">First name</div>
+		<div class="form-field">
+			<input type="text">
+			<div class="form-field-description">This is the description of the first name field</div>
+		</div>
+	</div>
+</form>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;form class&#x3D;&quot;i-form&quot;&gt;
+	&lt;div class&#x3D;&quot;form-group&quot;&gt;
+		&lt;div class&#x3D;&quot;form-label&quot;&gt;First name&lt;/div&gt;
+		&lt;div class&#x3D;&quot;form-field&quot;&gt;
+			&lt;input type&#x3D;&quot;text&quot;&gt;
+			&lt;div class&#x3D;&quot;form-field-description&quot;&gt;This is the description of the first name field&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="forms.11-horizontal-form">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Horizontal Form</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>The orientation of the form can be either <code>horizontal</code> or <code>vertical</code> (default). For more flexibility, the <code>form-group</code>s can also receive this classes in order to change the orientation of a specific field in the form. Several classes can be applied to the form components to alter their behaviour:</p>
+<ul>
+<li><code>i-form</code>:
+<ul>
+<li><code>no-block-padding</code>: Padding from <code>form-label</code> and <code>form-field</code> is removed</li>
+</ul>
+</li>
+<li><code>form-group</code>:
+<ul>
+<li><code>form-group-footer</code>: Used for the footer of the form</li>
+</ul>
+</li>
+<li><code>form-label</code>:
+<ul>
+<li><code>form-label-middle</code>: Aligns the label in the center (vertically)</li>
+<li><code>form-label-empty</code>: Used when there is no text for the label</li>
+</ul>
+</li>
+<li><code>form-field</code>:
+<ul>
+<li><code>fit-to-parent</code>: The width of this element will be identical to the one of its parent</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<div class="f-item-preview">
+	<form class="i-form horizontal">
+	<div class="form-group">
+		<div class="form-label form-label-middle">Name</div>
+		<div class="form-field">
+			<input type="text">
+			<div class="form-field-description">Add your first name</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="form-label form-label-empty"></div>
+		<div class="form-field">
+			<input type="text">
+			<div class="form-field-description">Add your last name</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="form-label form-label-middle">Static text</div>
+		<div class="form-field">
+			<div class="static-text">This is some static text</div>
+		</div>
+	</div>
+	<div class="form-group form-group-footer">
+		<div class="form-label"></div>
+		<div class="form-field">
+			<button class="i-button">Button</button>
+		</div>
+	</div>
+</form>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;form class&#x3D;&quot;i-form horizontal&quot;&gt;
+	&lt;div class&#x3D;&quot;form-group&quot;&gt;
+		&lt;div class&#x3D;&quot;form-label form-label-middle&quot;&gt;Name&lt;/div&gt;
+		&lt;div class&#x3D;&quot;form-field&quot;&gt;
+			&lt;input type&#x3D;&quot;text&quot;&gt;
+			&lt;div class&#x3D;&quot;form-field-description&quot;&gt;Add your first name&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;form-group&quot;&gt;
+		&lt;div class&#x3D;&quot;form-label form-label-empty&quot;&gt;&lt;/div&gt;
+		&lt;div class&#x3D;&quot;form-field&quot;&gt;
+			&lt;input type&#x3D;&quot;text&quot;&gt;
+			&lt;div class&#x3D;&quot;form-field-description&quot;&gt;Add your last name&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;form-group&quot;&gt;
+		&lt;div class&#x3D;&quot;form-label form-label-middle&quot;&gt;Static text&lt;/div&gt;
+		&lt;div class&#x3D;&quot;form-field&quot;&gt;
+			&lt;div class&#x3D;&quot;static-text&quot;&gt;This is some static text&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;form-group form-group-footer&quot;&gt;
+		&lt;div class&#x3D;&quot;form-label&quot;&gt;&lt;/div&gt;
+		&lt;div class&#x3D;&quot;form-field&quot;&gt;
+			&lt;button class&#x3D;&quot;i-button&quot;&gt;Button&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="forms.12-form-fieldsets">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Form Fieldsets</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-preview">
+	<form class="i-form horizontal">
+	<fieldset>
+		<legend>Fieldset title</legend>
+		<div class="fieldset-content">
+			<p class="description">description of the fieldset</p>
+			<div class="form-group">
+				<div class="form-label">First name</div>
+				<div class="form-field">
+					<input type="text">
+					<div class="form-field-description">This is the description of the first name field</div>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</form>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;form class&#x3D;&quot;i-form horizontal&quot;&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;Fieldset title&lt;/legend&gt;
+		&lt;div class&#x3D;&quot;fieldset-content&quot;&gt;
+			&lt;p class&#x3D;&quot;description&quot;&gt;description of the fieldset&lt;/p&gt;
+			&lt;div class&#x3D;&quot;form-group&quot;&gt;
+				&lt;div class&#x3D;&quot;form-label&quot;&gt;First name&lt;/div&gt;
+				&lt;div class&#x3D;&quot;form-field&quot;&gt;
+					&lt;input type&#x3D;&quot;text&quot;&gt;
+					&lt;div class&#x3D;&quot;form-field-description&quot;&gt;This is the description of the first name field&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
 
 
 <div class="f-item-group" id="toolbars">
