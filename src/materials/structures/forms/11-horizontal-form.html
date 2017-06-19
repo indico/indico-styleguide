@@ -1,0 +1,48 @@
+---
+notes: |
+  The orientation of the form can be either `horizontal` or `vertical` (default). For more flexibility, the `form-group`s can also receive this classes in order to change the orientation of a specific field in the form. Several classes can be applied to the form components to alter their behaviour:
+    * `i-form`:
+      * `no-block-padding`: Padding from `form-label` and `form-field` is removed
+    * `form-group`:
+      * `form-group-footer`: Used for the footer of the form
+    * `form-label`:
+      * `form-label-middle`: Aligns the label in the center (vertically)
+      * `form-label-empty`: Used when there is no text for the label
+    * `form-field`:
+      * `fit-to-parent`: The width of this element will be identical to the one of its parent
+
+---
+
+<form class="i-form horizontal">
+    <div class="form-group">
+        <div class="form-label form-label-middle">
+            <label>Name</label>
+        </div>
+        <div class="form-field">
+            {{> inputs.input}}
+            <div class="form-field-description">Add your first name</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="form-label form-label-empty"></div>
+        <div class="form-field">
+            {{> inputs.input}}
+            <div class="form-field-description">Add your last name</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="form-label form-label-middle">
+            <label>Static text</label>
+        </div>
+        <div class="form-field">
+            <div class="static-text">This is some static text</div>
+        </div>
+    </div>
+    <div class="form-group form-group-footer">
+        <div class="form-label"></div>
+        <div class="form-field">
+            {{> buttons.button}}
+
+        </div>
+    </div>
+</form>

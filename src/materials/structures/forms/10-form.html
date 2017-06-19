@@ -1,0 +1,16 @@
+---
+notes: |
+    To render forms, use the macros in `_form.html`. This is an example of the basic structure of an `i-form`.
+---
+
+<form class="i-form">
+    <div class="form-group">
+        <div class="form-label">
+            <label>First name</label>
+        </div>
+        <div class="form-field">
+            {{> inputs.input}}
+            <div class="form-field-description">This is the description of the first name field</div>
+        </div>
+    </div>
+</form>
