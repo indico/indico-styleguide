@@ -113,10 +113,13 @@
 						<a href="css.html" class="f-menu__heading">Css</a>
 						<ul>
 							<li>
-								<a href="css.html#colors">Colors</a>
+								<a href="css.html#icons">Icons</a>
 							</li>
 							<li>
-								<a href="css.html#icons">Icons</a>
+								<a href="css.html#palette">Palette</a>
+							</li>
+							<li>
+								<a href="css.html#typography">Typography</a>
 							</li>
 						</ul>
 					</li>
@@ -128,6 +131,9 @@
 							</li>
 							<li>
 								<a href="structures.html#forms">Forms</a>
+							</li>
+							<li>
+								<a href="structures.html#management-lists">Management Lists</a>
 							</li>
 							<li>
 								<a href="structures.html#timelines">Timelines</a>
@@ -427,6 +433,206 @@
 		&lt;/div&gt;
 	&lt;/fieldset&gt;
 &lt;/form&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-group" id="management-lists">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Management Lists</h2>
+	</div>
+		<div class="f-item-group" id="management-lists.01.00-management-list">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Management List</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>The management lists mainly consist of the toolbar and table components</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="list">
+	<div class="toolbars space-after">
+		<div class="toolbar">
+			<div class="group">
+				<a class="icon-checkbox-checked i-button arrow left icon-only" href="#" data-toggle="dropdown"></a>
+				<ul class="dropdown">
+					<li><a href="#" id="select-all">All</a></li>
+					<li><a href="#" id="select-none">None</a></li>
+				</ul>
+			</div>
+			<button class="i-button icon-settings highlight">Customize list</button>
+			<a class="i-button icon-plus">Add</a>
+		</div>
+		<div class="toolbar">
+			<div class="group">
+				<a class="i-button icon-link js-static-url"></a>
+			</div>
+			<div class="group">
+				<div>
+					<span class="i-button label icon-list">
+                        <span><strong>2</strong> / 2</span>
+					</span>
+				</div>
+			</div>
+			<div class="group">
+				<span class="i-button label icon-search"></span>
+				<span class="clearableinput">
+                    <input type="text" placeholder="Enter #id or search string" class="clearabletext">
+                </span>
+			</div>
+		</div>
+	</div>
+	<div class="list-content">
+		<div class="js-list-table-wrapper">
+			<table class="i-table tablesorter tablesorter-default" role="grid">
+				<thead>
+					<tr class="i-table">
+						<th class="i-table thin-column"></th>
+						<th class="i-table id-column">ID</th>
+						<th class="i-table">First name</th>
+						<th class="i-table">Last name</th>
+						<th class="i-table">Address</th>
+						<th class="i-table actions-column"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="i-table">
+						<td class="i-table id-column">
+							<input type="checkbox" class="select-row">
+						</td>
+						<td class="i-table id-column">1</td>
+						<td class="i-table">John</td>
+						<td class="i-table">Doe</td>
+						<td class="i-table">123 Main St. Anytown</td>
+						<td class="i-table actions-column">
+							<div class="group right entry-action-buttons">
+								<a href="#" class="icon-edit i-link highlight"></a>
+								<a href="#" class="icon-shield i-link highlight"></a>
+								<a href="#" class="icon-remove i-link danger"></a>
+							</div>
+						</td>
+					</tr>
+					<tr class="i-table">
+						<td class="i-table id-column">
+							<input type="checkbox" class="select-row">
+						</td>
+						<td class="i-table id-column">1</td>
+						<td class="i-table">Richard</td>
+						<td class="i-table">Roe</td>
+						<td class="i-table">125 Main St. Anytown</td>
+						<td class="i-table actions-column">
+							<div class="group right entry-action-buttons">
+								<a href="#" class="icon-edit i-link highlight"></a>
+								<a href="#" class="icon-shield i-link highlight"></a>
+								<a href="#" class="icon-remove i-link danger"></a>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;list&quot;&gt;
+	&lt;div class&#x3D;&quot;toolbars space-after&quot;&gt;
+		&lt;div class&#x3D;&quot;toolbar&quot;&gt;
+			&lt;div class&#x3D;&quot;group&quot;&gt;
+				&lt;a class&#x3D;&quot;icon-checkbox-checked i-button arrow left icon-only&quot; href&#x3D;&quot;#&quot; data-toggle&#x3D;&quot;dropdown&quot;&gt;&lt;/a&gt;
+				&lt;ul class&#x3D;&quot;dropdown&quot;&gt;
+					&lt;li&gt;&lt;a href&#x3D;&quot;#&quot; id&#x3D;&quot;select-all&quot;&gt;All&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href&#x3D;&quot;#&quot; id&#x3D;&quot;select-none&quot;&gt;None&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+			&lt;button class&#x3D;&quot;i-button icon-settings highlight&quot;&gt;Customize list&lt;/button&gt;
+			&lt;a class&#x3D;&quot;i-button icon-plus&quot;&gt;Add&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;toolbar&quot;&gt;
+			&lt;div class&#x3D;&quot;group&quot;&gt;
+				&lt;a class&#x3D;&quot;i-button icon-link js-static-url&quot;&gt;&lt;/a&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;group&quot;&gt;
+				&lt;div&gt;
+					&lt;span class&#x3D;&quot;i-button label icon-list&quot;&gt;
+                        &lt;span&gt;&lt;strong&gt;2&lt;/strong&gt; / 2&lt;/span&gt;
+					&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;group&quot;&gt;
+				&lt;span class&#x3D;&quot;i-button label icon-search&quot;&gt;&lt;/span&gt;
+				&lt;span class&#x3D;&quot;clearableinput&quot;&gt;
+                    &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Enter #id or search string&quot; class&#x3D;&quot;clearabletext&quot;&gt;
+                &lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;list-content&quot;&gt;
+		&lt;div class&#x3D;&quot;js-list-table-wrapper&quot;&gt;
+			&lt;table class&#x3D;&quot;i-table tablesorter tablesorter-default&quot; role&#x3D;&quot;grid&quot;&gt;
+				&lt;thead&gt;
+					&lt;tr class&#x3D;&quot;i-table&quot;&gt;
+						&lt;th class&#x3D;&quot;i-table thin-column&quot;&gt;&lt;/th&gt;
+						&lt;th class&#x3D;&quot;i-table id-column&quot;&gt;ID&lt;/th&gt;
+						&lt;th class&#x3D;&quot;i-table&quot;&gt;First name&lt;/th&gt;
+						&lt;th class&#x3D;&quot;i-table&quot;&gt;Last name&lt;/th&gt;
+						&lt;th class&#x3D;&quot;i-table&quot;&gt;Address&lt;/th&gt;
+						&lt;th class&#x3D;&quot;i-table actions-column&quot;&gt;&lt;/th&gt;
+					&lt;/tr&gt;
+				&lt;/thead&gt;
+				&lt;tbody&gt;
+					&lt;tr class&#x3D;&quot;i-table&quot;&gt;
+						&lt;td class&#x3D;&quot;i-table id-column&quot;&gt;
+							&lt;input type&#x3D;&quot;checkbox&quot; class&#x3D;&quot;select-row&quot;&gt;
+						&lt;/td&gt;
+						&lt;td class&#x3D;&quot;i-table id-column&quot;&gt;1&lt;/td&gt;
+						&lt;td class&#x3D;&quot;i-table&quot;&gt;John&lt;/td&gt;
+						&lt;td class&#x3D;&quot;i-table&quot;&gt;Doe&lt;/td&gt;
+						&lt;td class&#x3D;&quot;i-table&quot;&gt;123 Main St. Anytown&lt;/td&gt;
+						&lt;td class&#x3D;&quot;i-table actions-column&quot;&gt;
+							&lt;div class&#x3D;&quot;group right entry-action-buttons&quot;&gt;
+								&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;icon-edit i-link highlight&quot;&gt;&lt;/a&gt;
+								&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;icon-shield i-link highlight&quot;&gt;&lt;/a&gt;
+								&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;icon-remove i-link danger&quot;&gt;&lt;/a&gt;
+							&lt;/div&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr class&#x3D;&quot;i-table&quot;&gt;
+						&lt;td class&#x3D;&quot;i-table id-column&quot;&gt;
+							&lt;input type&#x3D;&quot;checkbox&quot; class&#x3D;&quot;select-row&quot;&gt;
+						&lt;/td&gt;
+						&lt;td class&#x3D;&quot;i-table id-column&quot;&gt;1&lt;/td&gt;
+						&lt;td class&#x3D;&quot;i-table&quot;&gt;Richard&lt;/td&gt;
+						&lt;td class&#x3D;&quot;i-table&quot;&gt;Roe&lt;/td&gt;
+						&lt;td class&#x3D;&quot;i-table&quot;&gt;125 Main St. Anytown&lt;/td&gt;
+						&lt;td class&#x3D;&quot;i-table actions-column&quot;&gt;
+							&lt;div class&#x3D;&quot;group right entry-action-buttons&quot;&gt;
+								&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;icon-edit i-link highlight&quot;&gt;&lt;/a&gt;
+								&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;icon-shield i-link highlight&quot;&gt;&lt;/a&gt;
+								&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;icon-remove i-link danger&quot;&gt;&lt;/a&gt;
+							&lt;/div&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/tbody&gt;
+			&lt;/table&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 </div>
 
 		</div>

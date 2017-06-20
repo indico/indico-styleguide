@@ -1,41 +1,41 @@
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
-
+/******/
 /******/ 		// Check if module is in cache
 /******/ 		if(installedModules[moduleId])
 /******/ 			return installedModules[moduleId].exports;
-
+/******/
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			exports: {},
 /******/ 			id: moduleId,
 /******/ 			loaded: false
 /******/ 		};
-
+/******/
 /******/ 		// Execute the module function
 /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-
+/******/
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;
-
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-
-
+/******/
+/******/
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
-
+/******/
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
-
+/******/
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
-
+/******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
 /******/ })
@@ -45,15 +45,15 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	var _this = this;
-
+	
 	__webpack_require__(1);
-
+	
 	/**
 	 * Global `fabricator` object
 	 * @namespace
 	 */
 	const fabricator = window.fabricator = {};
-
+	
 	/**
 	 * Default options
 	 * @type {Object}
@@ -67,16 +67,16 @@
 	  menu: false,
 	  mq: '(min-width: 60em)'
 	};
-
+	
 	// open menu by default if large screen
 	fabricator.options.menu = window.matchMedia(fabricator.options.mq).matches;
-
+	
 	/**
 	 * Feature detection
 	 * @type {Object}
 	 */
 	fabricator.test = {};
-
+	
 	// test for sessionStorage
 	fabricator.test.sessionStorage = (() => {
 	  const test = '_f';
@@ -88,12 +88,12 @@
 	    return false;
 	  }
 	})();
-
+	
 	// create storage object if it doesn't exist; store options
 	if (fabricator.test.sessionStorage) {
 	  sessionStorage.fabricator = sessionStorage.fabricator || JSON.stringify(fabricator.options);
 	}
-
+	
 	/**
 	 * Cache DOM
 	 * @type {Object}
@@ -104,7 +104,7 @@
 	  menuItems: document.querySelectorAll('.f-menu li a'),
 	  menuToggle: document.querySelector('.f-menu-toggle')
 	};
-
+	
 	/**
 	 * Get current option values from session storage
 	 * @return {Object}
@@ -112,47 +112,47 @@
 	fabricator.getOptions = () => {
 	  return fabricator.test.sessionStorage ? JSON.parse(sessionStorage.fabricator) : fabricator.options;
 	};
-
+	
 	/**
 	 * Build color chips
 	 */
 	fabricator.buildColorChips = () => {
-
+	
 	  const chips = document.querySelectorAll('.f-color-chip');
-
+	
 	  for (let i = chips.length - 1; i >= 0; i--) {
 	    const color = chips[i].querySelector('.f-color-chip__color').innerHTML;
 	    chips[i].style.borderTopColor = color;
 	    chips[i].style.borderBottomColor = color;
 	  }
-
+	
 	  return fabricator;
 	};
-
+	
 	/**
 	 * Add `f-active` class to active menu item
 	 */
 	fabricator.setActiveItem = () => {
-
+	
 	  /**
 	   * Match the window location with the menu item, set menu item as active
 	   */
 	  const setActive = () => {
-
+	
 	    // get current file and hash without first slash
 	    const loc = window.location.pathname + window.location.hash;
 	    const current = loc.replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, (match, slash, file, hash) => {
 	      return (file || '') + (hash || '').split('.')[0];
 	    }) || 'index.html';
-
+	
 	    // find the current section in the items array
 	    for (let i = fabricator.dom.menuItems.length - 1; i >= 0; i--) {
-
+	
 	      const item = fabricator.dom.menuItems[i];
-
+	
 	      // get item href without first slash
 	      const href = item.getAttribute('href').replace(/^\//g, '');
-
+	
 	      if (href === current) {
 	        item.classList.add('f-active');
 	      } else {
@@ -160,81 +160,81 @@
 	      }
 	    }
 	  };
-
+	
 	  window.addEventListener('hashchange', setActive);
-
+	
 	  setActive();
-
+	
 	  return fabricator;
 	};
-
+	
 	/**
 	 * Click handler to primary menu toggle
 	 * @return {Object} fabricator
 	 */
 	fabricator.menuToggle = () => {
-
+	
 	  // shortcut menu DOM
 	  const toggle = fabricator.dom.menuToggle;
 	  const options = fabricator.getOptions();
-
+	
 	  // toggle classes on certain elements
 	  const toggleClasses = () => {
 	    options.menu = !fabricator.dom.root.classList.contains('f-menu-active');
 	    fabricator.dom.root.classList.toggle('f-menu-active');
-
+	
 	    if (fabricator.test.sessionStorage) {
 	      sessionStorage.setItem('fabricator', JSON.stringify(options));
 	    }
 	  };
-
+	
 	  // toggle classes on ctrl + m press
 	  document.onkeydown = e => {
 	    if (e.ctrlKey && e.keyCode === 'M'.charCodeAt(0)) {
 	      toggleClasses();
 	    }
 	  };
-
+	
 	  // toggle classes on click
 	  toggle.addEventListener('click', () => {
 	    toggleClasses();
 	  });
-
+	
 	  // close menu when clicking on item (for collapsed menu view)
 	  const closeMenu = () => {
 	    if (!window.matchMedia(fabricator.options.mq).matches) {
 	      toggleClasses();
 	    }
 	  };
-
+	
 	  for (let i = 0; i < fabricator.dom.menuItems.length; i++) {
 	    fabricator.dom.menuItems[i].addEventListener('click', closeMenu);
 	  }
-
+	
 	  return fabricator;
 	};
-
+	
 	/**
 	 * Handler for preview and code toggles
 	 * @return {Object} fabricator
 	 */
 	fabricator.allItemsToggles = () => {
-
+	
 	  const itemCache = {
 	    labels: document.querySelectorAll('[data-f-toggle="labels"]'),
 	    notes: document.querySelectorAll('[data-f-toggle="notes"]'),
 	    code: document.querySelectorAll('[data-f-toggle="code"]')
 	  };
-
+	
 	  const toggleAllControls = document.querySelectorAll('.f-controls [data-f-toggle-control]');
 	  const options = fabricator.getOptions();
-
+	
 	  // toggle all
 	  const toggleAllItems = (type, value) => {
-
+	
 	    const button = document.querySelector(`.f-controls [data-f-toggle-control=${type}]`);
 	    const items = itemCache[type];
-
+	
 	    for (let i = 0; i < items.length; i++) {
 	      if (value) {
 	        items[i].classList.remove('f-item-hidden');
@@ -242,71 +242,71 @@
 	        items[i].classList.add('f-item-hidden');
 	      }
 	    }
-
+	
 	    // toggle styles
 	    if (value) {
 	      button.classList.add('f-active');
 	    } else {
 	      button.classList.remove('f-active');
 	    }
-
+	
 	    // update options
 	    options.toggles[type] = value;
-
+	
 	    if (fabricator.test.sessionStorage) {
 	      sessionStorage.setItem('fabricator', JSON.stringify(options));
 	    }
 	  };
-
+	
 	  for (let i = 0; i < toggleAllControls.length; i++) {
-
+	
 	    toggleAllControls[i].addEventListener('click', e => {
-
+	
 	      // extract info from target node
 	      const type = e.currentTarget.getAttribute('data-f-toggle-control');
 	      const value = e.currentTarget.className.indexOf('f-active') < 0;
-
+	
 	      // toggle the items
 	      toggleAllItems(type, value);
 	    });
 	  }
-
+	
 	  // persist toggle options from page to page
 	  Object.keys(options.toggles).forEach(key => {
 	    toggleAllItems(key, options.toggles[key]);
 	  });
-
+	
 	  return fabricator;
 	};
-
+	
 	/**
 	 * Handler for single item code toggling
 	 */
 	fabricator.singleItemToggle = () => {
-
+	
 	  const itemToggleSingle = document.querySelectorAll('.f-item-group [data-f-toggle-control]');
-
+	
 	  // toggle single
 	  const toggleSingleItemCode = e => {
 	    const group = e.currentTarget.parentNode.parentNode.parentNode;
 	    const type = e.currentTarget.getAttribute('data-f-toggle-control');
 	    group.querySelector(`[data-f-toggle=${type}]`).classList.toggle('f-item-hidden');
 	  };
-
+	
 	  for (let i = 0; i < itemToggleSingle.length; i++) {
 	    itemToggleSingle[i].addEventListener('click', toggleSingleItemCode);
 	  }
-
+	
 	  return fabricator;
 	};
-
+	
 	/**
 	 * Automatically select code when code block is clicked
 	 */
 	fabricator.bindCodeAutoSelect = () => {
-
+	
 	  const codeBlocks = document.querySelectorAll('.f-item-code');
-
+	
 	  const select = block => {
 	    const selection = window.getSelection();
 	    const range = document.createRange();
@@ -314,23 +314,23 @@
 	    selection.removeAllRanges();
 	    selection.addRange(range);
 	  };
-
+	
 	  for (let i = codeBlocks.length - 1; i >= 0; i--) {
 	    codeBlocks[i].addEventListener('click', select.bind(_this, codeBlocks[i]));
 	  }
 	};
-
+	
 	/**
 	 * Open/Close menu based on session var.
 	 * Also attach a media query listener to close the menu when resizing to smaller screen.
 	 */
 	fabricator.setInitialMenuState = () => {
-
+	
 	  // root element
 	  const root = document.querySelector('html');
-
+	
 	  const mq = window.matchMedia(fabricator.options.mq);
-
+	
 	  // if small screen
 	  const mediaChangeHandler = list => {
 	    if (!list.matches) {
@@ -343,13 +343,13 @@
 	      }
 	    }
 	  };
-
+	
 	  mq.addListener(mediaChangeHandler);
 	  mediaChangeHandler(mq);
-
+	
 	  return fabricator;
 	};
-
+	
 	/**
 	 * Initialization
 	 */
@@ -364,18 +364,18 @@
 	: typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope ? self // if in worker
 	: {} // if in node js
 	;
-
+	
 	/**
 	 * Prism: Lightweight, robust, elegant syntax highlighting
 	 * MIT license http://www.opensource.org/licenses/mit-license.php/
 	 * @author Lea Verou http://lea.verou.me
 	 */
-
+	
 	var Prism = function () {
-
+	
 		// Private helper vars
 		var lang = /\blang(?:uage)?-(?!\*)(\w+)\b/i;
-
+	
 		var _ = self.Prism = {
 			util: {
 				encode: function (tokens) {
@@ -387,48 +387,48 @@
 						return tokens.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\u00a0/g, ' ');
 					}
 				},
-
+	
 				type: function (o) {
 					return Object.prototype.toString.call(o).match(/\[object (\w+)\]/)[1];
 				},
-
+	
 				// Deep clone a language definition (e.g. to extend it)
 				clone: function (o) {
 					var type = _.util.type(o);
-
+	
 					switch (type) {
 						case 'Object':
 							var clone = {};
-
+	
 							for (var key in o) {
 								if (o.hasOwnProperty(key)) {
 									clone[key] = _.util.clone(o[key]);
 								}
 							}
-
+	
 							return clone;
-
+	
 						case 'Array':
 							return o.map(function (v) {
 								return _.util.clone(v);
 							});
 					}
-
+	
 					return o;
 				}
 			},
-
+	
 			languages: {
 				extend: function (id, redef) {
 					var lang = _.util.clone(_.languages[id]);
-
+	
 					for (var key in redef) {
 						lang[key] = redef[key];
 					}
-
+	
 					return lang;
 				},
-
+	
 				/**
 	    * Insert a token before another token in a language literal
 	    * As this needs to recreate the object (we cannot actually insert before keys in object literals),
@@ -441,55 +441,55 @@
 				insertBefore: function (inside, before, insert, root) {
 					root = root || _.languages;
 					var grammar = root[inside];
-
+	
 					if (arguments.length == 2) {
 						insert = arguments[1];
-
+	
 						for (var newToken in insert) {
 							if (insert.hasOwnProperty(newToken)) {
 								grammar[newToken] = insert[newToken];
 							}
 						}
-
+	
 						return grammar;
 					}
-
+	
 					var ret = {};
-
+	
 					for (var token in grammar) {
-
+	
 						if (grammar.hasOwnProperty(token)) {
-
+	
 							if (token == before) {
-
+	
 								for (var newToken in insert) {
-
+	
 									if (insert.hasOwnProperty(newToken)) {
 										ret[newToken] = insert[newToken];
 									}
 								}
 							}
-
+	
 							ret[token] = grammar[token];
 						}
 					}
-
+	
 					// Update references in other language definitions
 					_.languages.DFS(_.languages, function (key, value) {
 						if (value === root[inside] && key != inside) {
 							this[key] = ret;
 						}
 					});
-
+	
 					return root[inside] = ret;
 				},
-
+	
 				// Traverse a language definition with Depth First Search
 				DFS: function (o, callback, type) {
 					for (var i in o) {
 						if (o.hasOwnProperty(i)) {
 							callback.call(o, i, o[i], type || i);
-
+	
 							if (_.util.type(o[i]) === 'Object') {
 								_.languages.DFS(o[i], callback);
 							} else if (_.util.type(o[i]) === 'Array') {
@@ -499,224 +499,224 @@
 					}
 				}
 			},
-
+	
 			highlightAll: function (async, callback) {
 				var elements = document.querySelectorAll('code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code');
-
+	
 				for (var i = 0, element; element = elements[i++];) {
 					_.highlightElement(element, async === true, callback);
 				}
 			},
-
+	
 			highlightElement: function (element, async, callback) {
 				// Find language
 				var language,
 				    grammar,
 				    parent = element;
-
+	
 				while (parent && !lang.test(parent.className)) {
 					parent = parent.parentNode;
 				}
-
+	
 				if (parent) {
 					language = (parent.className.match(lang) || [, ''])[1];
 					grammar = _.languages[language];
 				}
-
+	
 				if (!grammar) {
 					return;
 				}
-
+	
 				// Set language on the element, if not present
 				element.className = element.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
-
+	
 				// Set language on the parent, for styling
 				parent = element.parentNode;
-
+	
 				if (/pre/i.test(parent.nodeName)) {
 					parent.className = parent.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
 				}
-
+	
 				var code = element.textContent;
-
+	
 				if (!code) {
 					return;
 				}
-
+	
 				code = code.replace(/^(?:\r?\n|\r)/, '');
-
+	
 				var env = {
 					element: element,
 					language: language,
 					grammar: grammar,
 					code: code
 				};
-
+	
 				_.hooks.run('before-highlight', env);
-
+	
 				if (async && self.Worker) {
 					var worker = new Worker(_.filename);
-
+	
 					worker.onmessage = function (evt) {
 						env.highlightedCode = Token.stringify(JSON.parse(evt.data), language);
-
+	
 						_.hooks.run('before-insert', env);
-
+	
 						env.element.innerHTML = env.highlightedCode;
-
+	
 						callback && callback.call(env.element);
 						_.hooks.run('after-highlight', env);
 					};
-
+	
 					worker.postMessage(JSON.stringify({
 						language: env.language,
 						code: env.code
 					}));
 				} else {
 					env.highlightedCode = _.highlight(env.code, env.grammar, env.language);
-
+	
 					_.hooks.run('before-insert', env);
-
+	
 					env.element.innerHTML = env.highlightedCode;
-
+	
 					callback && callback.call(element);
-
+	
 					_.hooks.run('after-highlight', env);
 				}
 			},
-
+	
 			highlight: function (text, grammar, language) {
 				var tokens = _.tokenize(text, grammar);
 				return Token.stringify(_.util.encode(tokens), language);
 			},
-
+	
 			tokenize: function (text, grammar, language) {
 				var Token = _.Token;
-
+	
 				var strarr = [text];
-
+	
 				var rest = grammar.rest;
-
+	
 				if (rest) {
 					for (var token in rest) {
 						grammar[token] = rest[token];
 					}
-
+	
 					delete grammar.rest;
 				}
-
+	
 				tokenloop: for (var token in grammar) {
 					if (!grammar.hasOwnProperty(token) || !grammar[token]) {
 						continue;
 					}
-
+	
 					var patterns = grammar[token];
 					patterns = _.util.type(patterns) === "Array" ? patterns : [patterns];
-
+	
 					for (var j = 0; j < patterns.length; ++j) {
 						var pattern = patterns[j],
 						    inside = pattern.inside,
 						    lookbehind = !!pattern.lookbehind,
 						    lookbehindLength = 0,
 						    alias = pattern.alias;
-
+	
 						pattern = pattern.pattern || pattern;
-
+	
 						for (var i = 0; i < strarr.length; i++) {
 							// Don’t cache length as it changes during the loop
-
+	
 							var str = strarr[i];
-
+	
 							if (strarr.length > text.length) {
 								// Something went terribly wrong, ABORT, ABORT!
 								break tokenloop;
 							}
-
+	
 							if (str instanceof Token) {
 								continue;
 							}
-
+	
 							pattern.lastIndex = 0;
-
+	
 							var match = pattern.exec(str);
-
+	
 							if (match) {
 								if (lookbehind) {
 									lookbehindLength = match[1].length;
 								}
-
+	
 								var from = match.index - 1 + lookbehindLength,
 								    match = match[0].slice(lookbehindLength),
 								    len = match.length,
 								    to = from + len,
 								    before = str.slice(0, from + 1),
 								    after = str.slice(to + 1);
-
+	
 								var args = [i, 1];
-
+	
 								if (before) {
 									args.push(before);
 								}
-
+	
 								var wrapped = new Token(token, inside ? _.tokenize(match, inside) : match, alias);
-
+	
 								args.push(wrapped);
-
+	
 								if (after) {
 									args.push(after);
 								}
-
+	
 								Array.prototype.splice.apply(strarr, args);
 							}
 						}
 					}
 				}
-
+	
 				return strarr;
 			},
-
+	
 			hooks: {
 				all: {},
-
+	
 				add: function (name, callback) {
 					var hooks = _.hooks.all;
-
+	
 					hooks[name] = hooks[name] || [];
-
+	
 					hooks[name].push(callback);
 				},
-
+	
 				run: function (name, env) {
 					var callbacks = _.hooks.all[name];
-
+	
 					if (!callbacks || !callbacks.length) {
 						return;
 					}
-
+	
 					for (var i = 0, callback; callback = callbacks[i++];) {
 						callback(env);
 					}
 				}
 			}
 		};
-
+	
 		var Token = _.Token = function (type, content, alias) {
 			this.type = type;
 			this.content = content;
 			this.alias = alias;
 		};
-
+	
 		Token.stringify = function (o, language, parent) {
 			if (typeof o == 'string') {
 				return o;
 			}
-
+	
 			if (_.util.type(o) === 'Array') {
 				return o.map(function (element) {
 					return Token.stringify(element, language, o);
 				}).join('');
 			}
-
+	
 			var env = {
 				type: o.type,
 				content: Token.stringify(o.content, language, parent),
@@ -726,27 +726,27 @@
 				language: language,
 				parent: parent
 			};
-
+	
 			if (env.type == 'comment') {
 				env.attributes['spellcheck'] = 'true';
 			}
-
+	
 			if (o.alias) {
 				var aliases = _.util.type(o.alias) === 'Array' ? o.alias : [o.alias];
 				Array.prototype.push.apply(env.classes, aliases);
 			}
-
+	
 			_.hooks.run('wrap', env);
-
+	
 			var attributes = '';
-
+	
 			for (var name in env.attributes) {
 				attributes += name + '="' + (env.attributes[name] || '') + '"';
 			}
-
+	
 			return '<' + env.tag + ' class="' + env.classes.join(' ') + '" ' + attributes + '>' + env.content + '</' + env.tag + '>';
 		};
-
+	
 		if (!self.document) {
 			if (!self.addEventListener) {
 				// in Node.js
@@ -757,30 +757,30 @@
 				var message = JSON.parse(evt.data),
 				    lang = message.language,
 				    code = message.code;
-
+	
 				self.postMessage(JSON.stringify(_.util.encode(_.tokenize(code, _.languages[lang]))));
 				self.close();
 			}, false);
-
+	
 			return self.Prism;
 		}
-
+	
 		// Get current script and highlight
 		var script = document.getElementsByTagName('script');
-
+	
 		script = script[script.length - 1];
-
+	
 		if (script) {
 			_.filename = script.src;
-
+	
 			if (document.addEventListener && !script.hasAttribute('data-manual')) {
 				document.addEventListener('DOMContentLoaded', _.highlightAll);
 			}
 		}
-
+	
 		return self.Prism;
 	}();
-
+	
 	if (typeof module !== 'undefined' && module.exports) {
 		module.exports = Prism;
 	}
@@ -813,15 +813,15 @@
 						'namespace': /^[\w-]+?:/
 					}
 				}
-
+	
 			}
 		},
 		'entity': /&#?[\da-z]{1,8};/i
 	};
-
+	
 	// Plugin to make entity title show the real entity, idea by Roman Komarov
 	Prism.hooks.add('wrap', function (env) {
-
+	
 		if (env.type === 'entity') {
 			env.attributes['title'] = env.content.replace(/&amp;/, '&');
 		}
@@ -843,7 +843,7 @@
 		'punctuation': /[\{\};:]/,
 		'function': /[-a-z0-9]+(?=\()/i
 	};
-
+	
 	if (Prism.languages.markup) {
 		Prism.languages.insertBefore('markup', 'tag', {
 			'style': {
@@ -858,7 +858,7 @@
 				alias: 'language-css'
 			}
 		});
-
+	
 		Prism.languages.insertBefore('inside', 'attr-value', {
 			'style-attr': {
 				pattern: /\s*style=("|').*?\1/i,
@@ -912,14 +912,14 @@
 		'number': /\b-?(0x[\dA-Fa-f]+|\d*\.?\d+([Ee][+-]?\d+)?|NaN|-?Infinity)\b/,
 		'function': /(?!\d)[a-z0-9_$]+(?=\()/i
 	});
-
+	
 	Prism.languages.insertBefore('javascript', 'keyword', {
 		'regex': {
 			pattern: /(^|[^/])\/(?!\/)(\[.+?]|\\.|[^/\r\n])+\/[gim]{0,3}(?=\s*($|[\r\n,.;})]))/,
 			lookbehind: true
 		}
 	});
-
+	
 	if (Prism.languages.markup) {
 		Prism.languages.insertBefore('markup', 'tag', {
 			'script': {

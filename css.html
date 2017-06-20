@@ -113,10 +113,13 @@
 						<a href="css.html" class="f-menu__heading">Css</a>
 						<ul>
 							<li>
-								<a href="css.html#colors">Colors</a>
+								<a href="css.html#icons">Icons</a>
 							</li>
 							<li>
-								<a href="css.html#icons">Icons</a>
+								<a href="css.html#palette">Palette</a>
+							</li>
+							<li>
+								<a href="css.html#typography">Typography</a>
 							</li>
 						</ul>
 					</li>
@@ -128,6 +131,9 @@
 							</li>
 							<li>
 								<a href="structures.html#forms">Forms</a>
+							</li>
+							<li>
+								<a href="structures.html#management-lists">Management Lists</a>
 							</li>
 							<li>
 								<a href="structures.html#timelines">Timelines</a>
@@ -158,239 +164,28 @@
 		
 <h1 data-f-toggle="labels">CSS</h1>
 
-<div class="f-item-group">
-
-    <div class="f-item-group" id="colors">
-    
-    	<div class="f-item-heading-group" data-f-toggle="labels">
-    		<h2 class="f-item-heading">Colors</h2>
-    		<div class="f-item-controls">
-    			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
-    				<svg>
-    					<use xlink:href="#f-icon-code" />
-    				</svg>
-    			</span>
-    		</div>
-    	</div><div class="f-item-preview">
-    	<div class="f-color-chips">
-    	<div class="f-color-chip color-darker-blue">
-    		<div class="f-color-chip__name">$darker-blue</div>
-    	</div>
-    	<div class="f-color-chip color-dark-blue">
-    		<div class="f-color-chip__name">$dark-blue</div>
-    	</div>
-    	<div class="f-color-chip color-blue">
-    		<div class="f-color-chip__name">$blue</div>
-    	</div>
-    	<div class="f-color-chip color-pastel-blue">
-    		<div class="f-color-chip__name">$pastel-blue</div>
-    	</div>
-    	<div class="f-color-chip color-light-blue">
-    		<div class="f-color-chip__name">$light-blue</div>
-    	</div>
-    </div>
-    <div class="f-color-chips">
-    	<div class="f-color-chip color-dark-red">
-    		<div class="f-color-chip__name">$dark-red</div>
-    	</div>
-    	<div class="f-color-chip color-red">
-    		<div class="f-color-chip__name">$red</div>
-    	</div>
-    	<div class="f-color-chip color-light-red">
-    		<div class="f-color-chip__name">$light-red</div>
-    	</div>
-    </div>
-    <div class="f-color-chips">
-    	<div class="f-color-chip color-black">
-    		<div class="f-color-chip__name">$black</div>
-    	</div>
-    	<div class="f-color-chip color-light-black">
-    		<div class="f-color-chip__name">$light-black</div>
-    	</div>
-    </div>
-    <div class="f-color-chips">
-    	<div class="f-color-chip color-dark-gray">
-    		<div class="f-color-chip__name">$dark-gray</div>
-    	</div>
-    	<div class="f-color-chip color-gray">
-    		<div class="f-color-chip__name">$gray</div>
-    	</div>
-    	<div class="f-color-chip color-pastel-gray">
-    		<div class="f-color-chip__name">$pastel-gray</div>
-    	</div>
-    	<div class="f-color-chip color-light-gray">
-    		<div class="f-color-chip__name">$light-gray</div>
-    	</div>
-    </div>
-    <div class="f-color-chips">
-    	<div class="f-color-chip color-dark-green">
-    		<div class="f-color-chip__name">$dark-green</div>
-    	</div>
-    	<div class="f-color-chip color-green">
-    		<div class="f-color-chip__name">$green</div>
-    	</div>
-    	<div class="f-color-chip color-light-green">
-    		<div class="f-color-chip__name">$light-green</div>
-    	</div>
-    </div>
-    <div class="f-color-chips">
-    	<div class="f-color-chip color-dark-yellow">
-    		<div class="f-color-chip__name">$dark-yellow</div>
-    	</div>
-    	<div class="f-color-chip color-yellow">
-    		<div class="f-color-chip__name">$yellow</div>
-    	</div>
-    	<div class="f-color-chip color-light-yellow">
-    		<div class="f-color-chip__name">$light-yellow</div>
-    	</div>
-    	<div class="f-color-chip color-postit-yellow">
-    		<div class="f-color-chip__name">$postit-yellow</div>
-    	</div>
-    </div>
-    <div class="f-color-chips">
-    	<div class="f-color-chip color-orange">
-    		<div class="f-color-chip__name">$orange</div>
-    	</div>
-    	<div class="f-color-chip color-bright-orange">
-    		<div class="f-color-chip__name">$bright-orange</div>
-    	</div>
-    </div>
-    <div class="f-color-chips">
-    	<div class="f-color-chip color-link">
-    		<div class="f-color-chip__name">$link</div>
-    	</div>
-    	<div class="f-color-chip color-indico-blue">
-    		<div class="f-color-chip__name">$indico-blue</div>
-    	</div>
-    	<div class="f-color-chip color-purple">
-    		<div class="f-color-chip__name">$purple</div>
-    	</div>
-    	<div class="f-color-chip color-separator-color">
-    		<div class="f-color-chip__name">$separator-color</div>
-    	</div>
-    </div>
-    </div>
-    <div class="f-item-code f-item-hidden" data-f-toggle="code">
-    	<pre><code class="language-markup">&lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-darker-blue&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$darker-blue&lt;/div&gt;
-    	&lt;/div&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-dark-blue&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$dark-blue&lt;/div&gt;
-    	&lt;/div&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-blue&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$blue&lt;/div&gt;
-    	&lt;/div&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-pastel-blue&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$pastel-blue&lt;/div&gt;
-    	&lt;/div&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-light-blue&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$light-blue&lt;/div&gt;
-    	&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-dark-red&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$dark-red&lt;/div&gt;
-    	&lt;/div&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-red&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$red&lt;/div&gt;
-    	&lt;/div&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-light-red&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$light-red&lt;/div&gt;
-    	&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-black&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$black&lt;/div&gt;
-    	&lt;/div&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-light-black&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$light-black&lt;/div&gt;
-    	&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-dark-gray&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$dark-gray&lt;/div&gt;
-    	&lt;/div&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-gray&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$gray&lt;/div&gt;
-    	&lt;/div&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-pastel-gray&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$pastel-gray&lt;/div&gt;
-    	&lt;/div&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-light-gray&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$light-gray&lt;/div&gt;
-    	&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-dark-green&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$dark-green&lt;/div&gt;
-    	&lt;/div&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-green&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$green&lt;/div&gt;
-    	&lt;/div&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-light-green&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$light-green&lt;/div&gt;
-    	&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-dark-yellow&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$dark-yellow&lt;/div&gt;
-    	&lt;/div&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-yellow&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$yellow&lt;/div&gt;
-    	&lt;/div&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-light-yellow&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$light-yellow&lt;/div&gt;
-    	&lt;/div&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-postit-yellow&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$postit-yellow&lt;/div&gt;
-    	&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-orange&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$orange&lt;/div&gt;
-    	&lt;/div&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-bright-orange&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$bright-orange&lt;/div&gt;
-    	&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-link&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$link&lt;/div&gt;
-    	&lt;/div&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-indico-blue&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$indico-blue&lt;/div&gt;
-    	&lt;/div&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-purple&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$purple&lt;/div&gt;
-    	&lt;/div&gt;
-    	&lt;div class&#x3D;&quot;f-color-chip color-separator-color&quot;&gt;
-    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$separator-color&lt;/div&gt;
-    	&lt;/div&gt;
-    &lt;/div&gt;</code></pre>
-    </div>
-    
-    
-    </div>
-
 
     <div class="f-item-group" id="icons">
     
-    	<div class="f-item-heading-group" data-f-toggle="labels">
-    		<h2 class="f-item-heading">Icons</h2>
-    		<div class="f-item-controls">
-    			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
-    				<svg>
-    					<use xlink:href="#f-icon-notes" />
-    				</svg>
-    			</span>
-    			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
-    				<svg>
-    					<use xlink:href="#f-icon-code" />
-    				</svg>
-    			</span>
-    		</div>
-    	</div><div class="f-item-notes" data-f-toggle="notes">
+    	<div class="f-item-heading-group">
+    		<h2 class="f-item-heading" data-f-toggle="labels">Icons</h2>
+    	</div>
+    		<div class="f-item-group" id="icons.icons">
+    			<div class="f-item-heading-group" data-f-toggle="labels">
+    				<h3 class="f-item-heading">Icons</h3>
+    				<div class="f-item-controls">
+    					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+    						<svg>
+    							<use xlink:href="#f-icon-notes" />
+    						</svg>
+    					</span>
+    					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+    						<svg>
+    							<use xlink:href="#f-icon-code" />
+    						</svg>
+    					</span>
+    				</div>
+    			</div><div class="f-item-notes" data-f-toggle="notes">
     	<p>The icons can be used by simply adding a class with the prefix <code>icon-</code> followed by the name of the icon.</p>
     
     </div>
@@ -1563,10 +1358,423 @@
     &lt;/div&gt;</code></pre>
     </div>
     
+    		</div>
     
     </div>
 
-</div>
+
+    <div class="f-item-group" id="palette">
+    
+    	<div class="f-item-heading-group">
+    		<h2 class="f-item-heading" data-f-toggle="labels">Palette</h2>
+    	</div>
+    		<div class="f-item-group" id="palette.colors">
+    			<div class="f-item-heading-group" data-f-toggle="labels">
+    				<h3 class="f-item-heading">Colors</h3>
+    				<div class="f-item-controls">
+    					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+    						<svg>
+    							<use xlink:href="#f-icon-code" />
+    						</svg>
+    					</span>
+    				</div>
+    			</div><div class="f-item-preview">
+    	<div class="f-color-chips">
+    	<div class="f-color-chip color-darker-blue">
+    		<div class="f-color-chip__name">$darker-blue</div>
+    	</div>
+    	<div class="f-color-chip color-dark-blue">
+    		<div class="f-color-chip__name">$dark-blue</div>
+    	</div>
+    	<div class="f-color-chip color-blue">
+    		<div class="f-color-chip__name">$blue</div>
+    	</div>
+    	<div class="f-color-chip color-pastel-blue">
+    		<div class="f-color-chip__name">$pastel-blue</div>
+    	</div>
+    	<div class="f-color-chip color-light-blue">
+    		<div class="f-color-chip__name">$light-blue</div>
+    	</div>
+    </div>
+    <div class="f-color-chips">
+    	<div class="f-color-chip color-dark-red">
+    		<div class="f-color-chip__name">$dark-red</div>
+    	</div>
+    	<div class="f-color-chip color-red">
+    		<div class="f-color-chip__name">$red</div>
+    	</div>
+    	<div class="f-color-chip color-light-red">
+    		<div class="f-color-chip__name">$light-red</div>
+    	</div>
+    </div>
+    <div class="f-color-chips">
+    	<div class="f-color-chip color-black">
+    		<div class="f-color-chip__name">$black</div>
+    	</div>
+    	<div class="f-color-chip color-light-black">
+    		<div class="f-color-chip__name">$light-black</div>
+    	</div>
+    </div>
+    <div class="f-color-chips">
+    	<div class="f-color-chip color-dark-gray">
+    		<div class="f-color-chip__name">$dark-gray</div>
+    	</div>
+    	<div class="f-color-chip color-gray">
+    		<div class="f-color-chip__name">$gray</div>
+    	</div>
+    	<div class="f-color-chip color-pastel-gray">
+    		<div class="f-color-chip__name">$pastel-gray</div>
+    	</div>
+    	<div class="f-color-chip color-light-gray">
+    		<div class="f-color-chip__name">$light-gray</div>
+    	</div>
+    </div>
+    <div class="f-color-chips">
+    	<div class="f-color-chip color-dark-green">
+    		<div class="f-color-chip__name">$dark-green</div>
+    	</div>
+    	<div class="f-color-chip color-green">
+    		<div class="f-color-chip__name">$green</div>
+    	</div>
+    	<div class="f-color-chip color-light-green">
+    		<div class="f-color-chip__name">$light-green</div>
+    	</div>
+    </div>
+    <div class="f-color-chips">
+    	<div class="f-color-chip color-dark-yellow">
+    		<div class="f-color-chip__name">$dark-yellow</div>
+    	</div>
+    	<div class="f-color-chip color-yellow">
+    		<div class="f-color-chip__name">$yellow</div>
+    	</div>
+    	<div class="f-color-chip color-light-yellow">
+    		<div class="f-color-chip__name">$light-yellow</div>
+    	</div>
+    	<div class="f-color-chip color-postit-yellow">
+    		<div class="f-color-chip__name">$postit-yellow</div>
+    	</div>
+    </div>
+    <div class="f-color-chips">
+    	<div class="f-color-chip color-orange">
+    		<div class="f-color-chip__name">$orange</div>
+    	</div>
+    	<div class="f-color-chip color-bright-orange">
+    		<div class="f-color-chip__name">$bright-orange</div>
+    	</div>
+    </div>
+    <div class="f-color-chips">
+    	<div class="f-color-chip color-link">
+    		<div class="f-color-chip__name">$link</div>
+    	</div>
+    	<div class="f-color-chip color-indico-blue">
+    		<div class="f-color-chip__name">$indico-blue</div>
+    	</div>
+    	<div class="f-color-chip color-purple">
+    		<div class="f-color-chip__name">$purple</div>
+    	</div>
+    	<div class="f-color-chip color-separator-color">
+    		<div class="f-color-chip__name">$separator-color</div>
+    	</div>
+    </div>
+    </div>
+    <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    	<pre><code class="language-markup">&lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-darker-blue&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$darker-blue&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-dark-blue&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$dark-blue&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-blue&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$blue&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-pastel-blue&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$pastel-blue&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-light-blue&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$light-blue&lt;/div&gt;
+    	&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-dark-red&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$dark-red&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-red&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$red&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-light-red&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$light-red&lt;/div&gt;
+    	&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-black&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$black&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-light-black&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$light-black&lt;/div&gt;
+    	&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-dark-gray&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$dark-gray&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-gray&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$gray&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-pastel-gray&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$pastel-gray&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-light-gray&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$light-gray&lt;/div&gt;
+    	&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-dark-green&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$dark-green&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-green&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$green&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-light-green&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$light-green&lt;/div&gt;
+    	&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-dark-yellow&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$dark-yellow&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-yellow&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$yellow&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-light-yellow&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$light-yellow&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-postit-yellow&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$postit-yellow&lt;/div&gt;
+    	&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-orange&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$orange&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-bright-orange&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$bright-orange&lt;/div&gt;
+    	&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;f-color-chips&quot;&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-link&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$link&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-indico-blue&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$indico-blue&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-purple&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$purple&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;f-color-chip color-separator-color&quot;&gt;
+    		&lt;div class&#x3D;&quot;f-color-chip__name&quot;&gt;$separator-color&lt;/div&gt;
+    	&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+    </div>
+    
+    		</div>
+    
+    </div>
+
+
+    <div class="f-item-group" id="typography">
+    
+    	<div class="f-item-heading-group">
+    		<h2 class="f-item-heading" data-f-toggle="labels">Typography</h2>
+    	</div>
+    		<div class="f-item-group" id="typography.00-fonts">
+    			<div class="f-item-heading-group" data-f-toggle="labels">
+    				<h3 class="f-item-heading">Fonts</h3>
+    				<div class="f-item-controls">
+    					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+    						<svg>
+    							<use xlink:href="#f-icon-notes" />
+    						</svg>
+    					</span>
+    					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+    						<svg>
+    							<use xlink:href="#f-icon-code" />
+    						</svg>
+    					</span>
+    				</div>
+    			</div><div class="f-item-notes" data-f-toggle="notes">
+    	<p>This is the list of mixins that define the available fonts in Indico.</p>
+    
+    </div>
+    <div class="f-item-preview">
+    	<h4>%font-family-body</h4>
+    <div class="f-font font-family-body">
+    	A B C D E F G H I J K L M N O P Q R S T U V W X Y Z <br> a b c d e f g h i j k l m n o p q r s t u v w x y z
+    </div>
+    <h4>%font-family-modern-body</h4>
+    <div class="f-font font-family-modern-body">
+    	A B C D E F G H I J K L M N O P Q R S T U V W X Y Z <br> a b c d e f g h i j k l m n o p q r s t u v w x y z
+    </div>
+    <h4>%font-family-title</h4>
+    <div class="f-font font-family-title">
+    	A B C D E F G H I J K L M N O P Q R S T U V W X Y Z <br> a b c d e f g h i j k l m n o p q r s t u v w x y z
+    </div>
+    <h4>%font-family-title-light</h4>
+    <div class="f-font font-family-title-light">
+    	A B C D E F G H I J K L M N O P Q R S T U V W X Y Z <br> a b c d e f g h i j k l m n o p q r s t u v w x y z
+    </div>
+    <h4>%font-family-description</h4>
+    <div class="f-font font-family-description">
+    	A B C D E F G H I J K L M N O P Q R S T U V W X Y Z <br> a b c d e f g h i j k l m n o p q r s t u v w x y z
+    </div>
+    <h4>%font-family-monospace</h4>
+    <div class="f-font font-family-monospace">
+    	A B C D E F G H I J K L M N O P Q R S T U V W X Y Z <br> a b c d e f g h i j k l m n o p q r s t u v w x y z
+    </div>
+    <h4>%font-family-serif</h4>
+    <div class="f-font font-family-serif">
+    	A B C D E F G H I J K L M N O P Q R S T U V W X Y Z <br> a b c d e f g h i j k l m n o p q r s t u v w x y z
+    </div>
+    <h4>%font-family-form</h4>
+    <div class="f-font font-family-form">
+    	A B C D E F G H I J K L M N O P Q R S T U V W X Y Z <br> a b c d e f g h i j k l m n o p q r s t u v w x y z
+    </div>
+    <h4>%font-family-logo</h4>
+    <div class="f-font font-family-logo">
+    	A B C D E F G H I J K L M N O P Q R S T U V W X Y Z <br> a b c d e f g h i j k l m n o p q r s t u v w x y z
+    </div>
+    </div>
+    <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    	<pre><code class="language-markup">&lt;h4&gt;%font-family-body&lt;/h4&gt;
+    &lt;div class&#x3D;&quot;f-font font-family-body&quot;&gt;
+    	A B C D E F G H I J K L M N O P Q R S T U V W X Y Z &lt;br&gt; a b c d e f g h i j k l m n o p q r s t u v w x y z
+    &lt;/div&gt;
+    &lt;h4&gt;%font-family-modern-body&lt;/h4&gt;
+    &lt;div class&#x3D;&quot;f-font font-family-modern-body&quot;&gt;
+    	A B C D E F G H I J K L M N O P Q R S T U V W X Y Z &lt;br&gt; a b c d e f g h i j k l m n o p q r s t u v w x y z
+    &lt;/div&gt;
+    &lt;h4&gt;%font-family-title&lt;/h4&gt;
+    &lt;div class&#x3D;&quot;f-font font-family-title&quot;&gt;
+    	A B C D E F G H I J K L M N O P Q R S T U V W X Y Z &lt;br&gt; a b c d e f g h i j k l m n o p q r s t u v w x y z
+    &lt;/div&gt;
+    &lt;h4&gt;%font-family-title-light&lt;/h4&gt;
+    &lt;div class&#x3D;&quot;f-font font-family-title-light&quot;&gt;
+    	A B C D E F G H I J K L M N O P Q R S T U V W X Y Z &lt;br&gt; a b c d e f g h i j k l m n o p q r s t u v w x y z
+    &lt;/div&gt;
+    &lt;h4&gt;%font-family-description&lt;/h4&gt;
+    &lt;div class&#x3D;&quot;f-font font-family-description&quot;&gt;
+    	A B C D E F G H I J K L M N O P Q R S T U V W X Y Z &lt;br&gt; a b c d e f g h i j k l m n o p q r s t u v w x y z
+    &lt;/div&gt;
+    &lt;h4&gt;%font-family-monospace&lt;/h4&gt;
+    &lt;div class&#x3D;&quot;f-font font-family-monospace&quot;&gt;
+    	A B C D E F G H I J K L M N O P Q R S T U V W X Y Z &lt;br&gt; a b c d e f g h i j k l m n o p q r s t u v w x y z
+    &lt;/div&gt;
+    &lt;h4&gt;%font-family-serif&lt;/h4&gt;
+    &lt;div class&#x3D;&quot;f-font font-family-serif&quot;&gt;
+    	A B C D E F G H I J K L M N O P Q R S T U V W X Y Z &lt;br&gt; a b c d e f g h i j k l m n o p q r s t u v w x y z
+    &lt;/div&gt;
+    &lt;h4&gt;%font-family-form&lt;/h4&gt;
+    &lt;div class&#x3D;&quot;f-font font-family-form&quot;&gt;
+    	A B C D E F G H I J K L M N O P Q R S T U V W X Y Z &lt;br&gt; a b c d e f g h i j k l m n o p q r s t u v w x y z
+    &lt;/div&gt;
+    &lt;h4&gt;%font-family-logo&lt;/h4&gt;
+    &lt;div class&#x3D;&quot;f-font font-family-logo&quot;&gt;
+    	A B C D E F G H I J K L M N O P Q R S T U V W X Y Z &lt;br&gt; a b c d e f g h i j k l m n o p q r s t u v w x y z
+    &lt;/div&gt;</code></pre>
+    </div>
+    
+    		</div>
+    		<div class="f-item-group" id="typography.01-headings">
+    			<div class="f-item-heading-group" data-f-toggle="labels">
+    				<h3 class="f-item-heading">Headings</h3>
+    				<div class="f-item-controls">
+    					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+    						<svg>
+    							<use xlink:href="#f-icon-code" />
+    						</svg>
+    					</span>
+    				</div>
+    			</div><div class="f-item-preview">
+    	<h1>h1. Indico heading</h1>
+    <h2>h2. Indico heading</h2>
+    <h3>h3. Indico heading</h3>
+    <h4>h4. Indico heading</h4>
+    <h5>h5. Indico heading</h5>
+    <h6>h6. Indico heading</h6>
+    </div>
+    <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    	<pre><code class="language-markup">&lt;h1&gt;h1. Indico heading&lt;/h1&gt;
+    &lt;h2&gt;h2. Indico heading&lt;/h2&gt;
+    &lt;h3&gt;h3. Indico heading&lt;/h3&gt;
+    &lt;h4&gt;h4. Indico heading&lt;/h4&gt;
+    &lt;h5&gt;h5. Indico heading&lt;/h5&gt;
+    &lt;h6&gt;h6. Indico heading&lt;/h6&gt;</code></pre>
+    </div>
+    
+    		</div>
+    		<div class="f-item-group" id="typography.05-inline-text-elements">
+    			<div class="f-item-heading-group" data-f-toggle="labels">
+    				<h3 class="f-item-heading">Inline Text Elements</h3>
+    				<div class="f-item-controls">
+    					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+    						<svg>
+    							<use xlink:href="#f-icon-code" />
+    						</svg>
+    					</span>
+    				</div>
+    			</div><div class="f-item-preview">
+    	<div class="bold">.bold</div>
+    <div class="italic">.italic</div>
+    <div class="underline">.underline</div>
+    <div class="preformatted">.preformatted</div>
+    <div class="mono">.mono</div>
+    <div>normal text<sup>.sup</sup></div>
+    <div>normal text<sub>.sub</sub></div>
+    <div class="text-important">.text-important</div>
+    <div class="text-normal">.text-normal</div>
+    <div class="text-not-important">.text-not-important</div>
+    <div class="text-error">.text-error</div>
+    <div class="text-superfluous">.text-superfluous</div>
+    <div class="text-paper">.text-paper</div>
+    </div>
+    <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    	<pre><code class="language-markup">&lt;div class&#x3D;&quot;bold&quot;&gt;.bold&lt;/div&gt;
+    &lt;div class&#x3D;&quot;italic&quot;&gt;.italic&lt;/div&gt;
+    &lt;div class&#x3D;&quot;underline&quot;&gt;.underline&lt;/div&gt;
+    &lt;div class&#x3D;&quot;preformatted&quot;&gt;.preformatted&lt;/div&gt;
+    &lt;div class&#x3D;&quot;mono&quot;&gt;.mono&lt;/div&gt;
+    &lt;div&gt;normal text&lt;sup&gt;.sup&lt;/sup&gt;&lt;/div&gt;
+    &lt;div&gt;normal text&lt;sub&gt;.sub&lt;/sub&gt;&lt;/div&gt;
+    &lt;div class&#x3D;&quot;text-important&quot;&gt;.text-important&lt;/div&gt;
+    &lt;div class&#x3D;&quot;text-normal&quot;&gt;.text-normal&lt;/div&gt;
+    &lt;div class&#x3D;&quot;text-not-important&quot;&gt;.text-not-important&lt;/div&gt;
+    &lt;div class&#x3D;&quot;text-error&quot;&gt;.text-error&lt;/div&gt;
+    &lt;div class&#x3D;&quot;text-superfluous&quot;&gt;.text-superfluous&lt;/div&gt;
+    &lt;div class&#x3D;&quot;text-paper&quot;&gt;.text-paper&lt;/div&gt;</code></pre>
+    </div>
+    
+    		</div>
+    		<div class="f-item-group" id="typography.10-blockquotes">
+    			<div class="f-item-heading-group" data-f-toggle="labels">
+    				<h3 class="f-item-heading">Blockquotes</h3>
+    				<div class="f-item-controls">
+    					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+    						<svg>
+    							<use xlink:href="#f-icon-code" />
+    						</svg>
+    					</span>
+    				</div>
+    			</div><div class="f-item-preview">
+    	<div class="quotation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante</div>
+    </div>
+    <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    	<pre><code class="language-markup">&lt;div class&#x3D;&quot;quotation&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante&lt;/div&gt;</code></pre>
+    </div>
+    
+    		</div>
+    
+    </div>
+
 
 
 
