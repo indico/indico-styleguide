@@ -124,7 +124,13 @@
 						<a href="structures.html" class="f-menu__heading">Structures</a>
 						<ul>
 							<li>
+								<a href="structures.html#box-groups">Box Groups</a>
+							</li>
+							<li>
 								<a href="structures.html#forms">Forms</a>
+							</li>
+							<li>
+								<a href="structures.html#timelines">Timelines</a>
 							</li>
 							<li>
 								<a href="structures.html#toolbars">Toolbars</a>
@@ -151,6 +157,79 @@
 
 		
 <h1 data-f-toggle="labels">Structures</h1>
+
+
+<div class="f-item-group" id="box-groups">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Box Groups</h2>
+	</div>
+		<div class="f-item-group" id="box-groups.01.00-vertical-grouping">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Vertical Grouping</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-preview">
+	<div class="i-box-group vert">
+	<div class="i-box">
+		<div class="i-box-header">
+			<div class="i-box-title">title</div>
+			<div class="i-box-buttons">
+				<div class="toolbar">
+					<button class="i-button">Button</button>
+					<button class="i-button highlight">Button</button>
+				</div>
+			</div>
+		</div>
+		<div class="i-box-content">content</div>
+	</div>
+	<div class="i-box">
+		<div class="i-box-header">
+			<div class="i-box-title">title</div>
+			<div class="i-box-metadata">
+				<span class="label">label:</span>
+				<span class="content">value</span>
+			</div>
+		</div>
+		<div class="i-box-content">content</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;i-box-group vert&quot;&gt;
+	&lt;div class&#x3D;&quot;i-box&quot;&gt;
+		&lt;div class&#x3D;&quot;i-box-header&quot;&gt;
+			&lt;div class&#x3D;&quot;i-box-title&quot;&gt;title&lt;/div&gt;
+			&lt;div class&#x3D;&quot;i-box-buttons&quot;&gt;
+				&lt;div class&#x3D;&quot;toolbar&quot;&gt;
+					&lt;button class&#x3D;&quot;i-button&quot;&gt;Button&lt;/button&gt;
+					&lt;button class&#x3D;&quot;i-button highlight&quot;&gt;Button&lt;/button&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;i-box-content&quot;&gt;content&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;i-box&quot;&gt;
+		&lt;div class&#x3D;&quot;i-box-header&quot;&gt;
+			&lt;div class&#x3D;&quot;i-box-title&quot;&gt;title&lt;/div&gt;
+			&lt;div class&#x3D;&quot;i-box-metadata&quot;&gt;
+				&lt;span class&#x3D;&quot;label&quot;&gt;label:&lt;/span&gt;
+				&lt;span class&#x3D;&quot;content&quot;&gt;value&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;i-box-content&quot;&gt;content&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
 
 
 <div class="f-item-group" id="forms">
@@ -348,6 +427,215 @@
 		&lt;/div&gt;
 	&lt;/fieldset&gt;
 &lt;/form&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-group" id="timelines">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Timelines</h2>
+	</div>
+		<div class="f-item-group" id="timelines.01.00-timeline">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Timeline</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-preview">
+	<div class="i-timeline">
+	<div class="i-timeline-item">
+		<div class="i-timeline-item-label avatar-placeholder" style="background-color: #aed581;">J</div>
+		<div class="i-timeline-item-box header-indicator-left header-only">
+			<div class="i-box-header">
+				<strong>John Doe</strong> performed this action
+				<time>20 Jun 2017</time>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="i-timeline">
+	<div class="i-timeline">
+		<div class="i-timeline-connect-down to-separator"></div>
+	</div>
+</div>
+<div class="i-timeline">
+	<div class="i-timeline-item">
+		<div class="i-timeline-item-label avatar-placeholder" style="background-color: #aed581;">J</div>
+		<div class="i-timeline-item-box header-indicator-left header-only">
+			<div class="i-box-header">
+				<strong>John Doe</strong> performed this action
+				<time>20 Jun 2017</time>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;i-timeline&quot;&gt;
+	&lt;div class&#x3D;&quot;i-timeline-item&quot;&gt;
+		&lt;div class&#x3D;&quot;i-timeline-item-label avatar-placeholder&quot; style&#x3D;&quot;background-color: #aed581;&quot;&gt;J&lt;/div&gt;
+		&lt;div class&#x3D;&quot;i-timeline-item-box header-indicator-left header-only&quot;&gt;
+			&lt;div class&#x3D;&quot;i-box-header&quot;&gt;
+				&lt;strong&gt;John Doe&lt;/strong&gt; performed this action
+				&lt;time&gt;20 Jun 2017&lt;/time&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;i-timeline&quot;&gt;
+	&lt;div class&#x3D;&quot;i-timeline&quot;&gt;
+		&lt;div class&#x3D;&quot;i-timeline-connect-down to-separator&quot;&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;i-timeline&quot;&gt;
+	&lt;div class&#x3D;&quot;i-timeline-item&quot;&gt;
+		&lt;div class&#x3D;&quot;i-timeline-item-label avatar-placeholder&quot; style&#x3D;&quot;background-color: #aed581;&quot;&gt;J&lt;/div&gt;
+		&lt;div class&#x3D;&quot;i-timeline-item-box header-indicator-left header-only&quot;&gt;
+			&lt;div class&#x3D;&quot;i-box-header&quot;&gt;
+				&lt;strong&gt;John Doe&lt;/strong&gt; performed this action
+				&lt;time&gt;20 Jun 2017&lt;/time&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="timelines.01.01-timeline-with-subtimelines">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Timeline With Subtimelines</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-preview">
+	<div class="i-timeline">
+	<div class="i-timeline-item">
+		<div class="i-timeline-item-label avatar-placeholder" style="background-color: #aed581;">J</div>
+		<div class="i-timeline-item-box header-indicator-left">
+			<div class="i-box-header">
+				<strong>John Doe</strong> performed this action
+				<time>20 Jun 2017</time>
+			</div>
+			<div class="i-box-content">content</div>
+		</div>
+	</div>
+</div>
+<div class="i-timeline">
+	<div class="i-timeline with-line">
+		<div class="i-timeline-connect-up"></div>
+		<div class="i-timeline-item">
+			<div class="i-timeline-item-label avatar-placeholder" style="background-color: #aed581;">J</div>
+			<div class="flexrow i-timeline-item-content">
+				<div class="i-timeline-item-metadata">
+					<div class="f-self-stretch">
+						<strong>John Doe</strong> performed this action
+						<time>20 Jun 2017</time>
+					</div>
+					<div>
+						<a href="#">link</a>
+					</div>
+				</div>
+				<div class="i-timeline-item-box header-indicator-top">
+					<div class="i-box-header flexrow">
+						<span class="f-self-stretch">timeline item title</span>
+						<a class="i-link icon-edit" href="#"></a>
+					</div>
+					<div class="i-box-content js-form-container">content</div>
+				</div>
+			</div>
+		</div>
+		<div class="i-timeline-item">
+			<div class="i-timeline-item-label action icon-image"></div>
+			<div class="i-timeline-item-box footer-only header-indicator-left">
+				<div class="i-box-footer">content</div>
+			</div>
+		</div>
+	</div>
+	<div class="i-timeline">
+		<div class="i-timeline-connect-down to-separator"></div>
+	</div>
+	<div class="i-timeline-separator"></div>
+	<div class="i-timeline-item">
+		<div class="i-timeline-item-label avatar-placeholder" style="background-color: #aed581;">J</div>
+		<div class="i-timeline-item-box header-indicator-left header-only">
+			<div class="i-box-header">
+				<strong>John Doe</strong> performed this action
+				<time>20 Jun 2017</time>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;i-timeline&quot;&gt;
+	&lt;div class&#x3D;&quot;i-timeline-item&quot;&gt;
+		&lt;div class&#x3D;&quot;i-timeline-item-label avatar-placeholder&quot; style&#x3D;&quot;background-color: #aed581;&quot;&gt;J&lt;/div&gt;
+		&lt;div class&#x3D;&quot;i-timeline-item-box header-indicator-left&quot;&gt;
+			&lt;div class&#x3D;&quot;i-box-header&quot;&gt;
+				&lt;strong&gt;John Doe&lt;/strong&gt; performed this action
+				&lt;time&gt;20 Jun 2017&lt;/time&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;i-box-content&quot;&gt;content&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;i-timeline&quot;&gt;
+	&lt;div class&#x3D;&quot;i-timeline with-line&quot;&gt;
+		&lt;div class&#x3D;&quot;i-timeline-connect-up&quot;&gt;&lt;/div&gt;
+		&lt;div class&#x3D;&quot;i-timeline-item&quot;&gt;
+			&lt;div class&#x3D;&quot;i-timeline-item-label avatar-placeholder&quot; style&#x3D;&quot;background-color: #aed581;&quot;&gt;J&lt;/div&gt;
+			&lt;div class&#x3D;&quot;flexrow i-timeline-item-content&quot;&gt;
+				&lt;div class&#x3D;&quot;i-timeline-item-metadata&quot;&gt;
+					&lt;div class&#x3D;&quot;f-self-stretch&quot;&gt;
+						&lt;strong&gt;John Doe&lt;/strong&gt; performed this action
+						&lt;time&gt;20 Jun 2017&lt;/time&gt;
+					&lt;/div&gt;
+					&lt;div&gt;
+						&lt;a href&#x3D;&quot;#&quot;&gt;link&lt;/a&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class&#x3D;&quot;i-timeline-item-box header-indicator-top&quot;&gt;
+					&lt;div class&#x3D;&quot;i-box-header flexrow&quot;&gt;
+						&lt;span class&#x3D;&quot;f-self-stretch&quot;&gt;timeline item title&lt;/span&gt;
+						&lt;a class&#x3D;&quot;i-link icon-edit&quot; href&#x3D;&quot;#&quot;&gt;&lt;/a&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;i-box-content js-form-container&quot;&gt;content&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;i-timeline-item&quot;&gt;
+			&lt;div class&#x3D;&quot;i-timeline-item-label action icon-image&quot;&gt;&lt;/div&gt;
+			&lt;div class&#x3D;&quot;i-timeline-item-box footer-only header-indicator-left&quot;&gt;
+				&lt;div class&#x3D;&quot;i-box-footer&quot;&gt;content&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;i-timeline&quot;&gt;
+		&lt;div class&#x3D;&quot;i-timeline-connect-down to-separator&quot;&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;i-timeline-separator&quot;&gt;&lt;/div&gt;
+	&lt;div class&#x3D;&quot;i-timeline-item&quot;&gt;
+		&lt;div class&#x3D;&quot;i-timeline-item-label avatar-placeholder&quot; style&#x3D;&quot;background-color: #aed581;&quot;&gt;J&lt;/div&gt;
+		&lt;div class&#x3D;&quot;i-timeline-item-box header-indicator-left header-only&quot;&gt;
+			&lt;div class&#x3D;&quot;i-box-header&quot;&gt;
+				&lt;strong&gt;John Doe&lt;/strong&gt; performed this action
+				&lt;time&gt;20 Jun 2017&lt;/time&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 </div>
 
 		</div>
