@@ -1,0 +1,87 @@
+---
+notes: The management lists mainly consist of the toolbar and table components
+---
+
+<div class="list">
+    <div class="toolbars space-after">
+        <div class="toolbar">
+            <div class="group">
+                <a class="icon-checkbox-checked i-button arrow left icon-only" href="#" data-toggle="dropdown"></a>
+                <ul class="dropdown">
+                    <li><a href="#" id="select-all">All</a></li>
+                    <li><a href="#" id="select-none">None</a></li>
+                </ul>
+            </div>
+            <button class="i-button icon-settings highlight">Customize list</button>
+            <a class="i-button icon-plus">Add</a>
+        </div>
+        <div class="toolbar">
+            <div class="group">
+                <a class="i-button icon-link js-static-url"></a>
+            </div>
+            <div class="group">
+                <div>
+                    <span class="i-button label icon-list">
+                        <span><strong>2</strong> / 2</span>
+                    </span>
+                </div>
+            </div>
+            <div class="group">
+                <span class="i-button label icon-search"></span>
+                <span class="clearableinput">
+                    <input type="text" placeholder="Enter #id or search string" class="clearabletext">
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="list-content">
+        <div class="js-list-table-wrapper">
+            <table class="i-table tablesorter tablesorter-default" role="grid">
+                <thead>
+                    <tr class="i-table">
+                        <th class="i-table thin-column"></th>
+                        <th class="i-table id-column">ID</th>
+                        <th class="i-table">First name</th>
+                        <th class="i-table">Last name</th>
+                        <th class="i-table">Address</th>
+                        <th class="i-table actions-column"></th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        <tr class="i-table">
+                            <td class="i-table id-column">
+                                <input type="checkbox" class="select-row">
+                            </td>
+                            <td class="i-table id-column">1</td>
+                            <td class="i-table">John</td>
+                            <td class="i-table">Doe</td>
+                            <td class="i-table">123 Main St. Anytown</td>
+                            <td class="i-table actions-column">
+                                <div class="group right entry-action-buttons">
+                                    <a href="#" class="icon-edit i-link highlight"></a>
+                                    <a href="#" class="icon-shield i-link highlight"></a>
+                                    <a href="#" class="icon-remove i-link danger"></a>
+                               </div>
+                            </td>
+                        </tr>
+                        <tr class="i-table">
+                            <td class="i-table id-column">
+                                <input type="checkbox" class="select-row">
+                            </td>
+                            <td class="i-table id-column">1</td>
+                            <td class="i-table">Richard</td>
+                            <td class="i-table">Roe</td>
+                            <td class="i-table">125 Main St. Anytown</td>
+                            <td class="i-table actions-column">
+                                <div class="group right entry-action-buttons">
+                                    <a href="#" class="icon-edit i-link highlight"></a>
+                                    <a href="#" class="icon-shield i-link highlight"></a>
+                                    <a href="#" class="icon-remove i-link danger"></a>
+                               </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
