@@ -109,3 +109,43 @@
         color: $black;
     }
 }
+
+.f-font {
+    font-size: 2em;
+}
+
+.font-family-body {
+    @extend %font-family-body;
+}
+
+.font-family-modern-body {
+    @extend %font-family-modern-body;
+}
+
+.font-family-title {
+    @extend %font-family-title;
+}
+
+.font-family-title-light {
+    @extend %font-family-title-light;
+}
+
+.font-family-description {
+    @extend %font-family-description;
+}
+
+.font-family-monospace {
+    @extend %font-family-monospace;
+}
+
+.font-family-serif {
+    @extend %font-family-serif;
+}
+
+.font-family-form {
+    @extend %font-family-form;
+}
+
+.font-family-logo {
+    @extend %font-family-logo;
+}
