@@ -149,3 +149,7 @@
 .font-family-logo {
     @extend %font-family-logo;
 }
+
+.corner-message {
+    display: inline-flex;
+}
