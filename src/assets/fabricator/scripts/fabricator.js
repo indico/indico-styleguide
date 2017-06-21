@@ -70,24 +70,6 @@ fabricator.getOptions = () => {
 
 
 /**
- * Build color chips
- */
-fabricator.buildColorChips = () => {
-
-  const chips = document.querySelectorAll('.f-color-chip');
-
-  for (let i = chips.length - 1; i >= 0; i--) {
-    const color = chips[i].querySelector('.f-color-chip__color').innerHTML;
-    chips[i].style.borderTopColor = color;
-    chips[i].style.borderBottomColor = color;
-  }
-
-  return fabricator;
-
-};
-
-
-/**
  * Add `f-active` class to active menu item
  */
 fabricator.setActiveItem = () => {
@@ -334,6 +316,5 @@ fabricator
  .menuToggle()
  .allItemsToggles()
  .singleItemToggle()
- .buildColorChips()
  .setActiveItem()
  .bindCodeAutoSelect();
